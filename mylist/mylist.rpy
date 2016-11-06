@@ -3768,7 +3768,7 @@ label sprites_my_list_el_ru:
 
 label sprites_my_list_sh_ru:
     menu:
-        "Оычный":
+        "Обычный":
             jump sprites_my_list_sh_1_ru
         "Очки":
             jump sprites_my_list_sh_2_ru
