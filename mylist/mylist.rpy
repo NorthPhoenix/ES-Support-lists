@@ -1,6 +1,6 @@
 ﻿init:
 
-    $ mods["my_list"]=u"Как сделать мод: Вспомогательный список"
+    $ mods["my_list"]=u"Как сделать мод: Вспомогательный список Nikita & Walther"
     
     $ ss = Character(u'Саманта', color="#c8ffc8", what_color="E2C778", drop_shadow = [ (-1, -1), (1, -1), (-1, 1), (1, 1) ], drop_shadow_color = "#000")
     
