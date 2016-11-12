@@ -4,8 +4,8 @@ label extra_my_list:
         "Спрайты":
             jump extra_my_list_sprites
         ">>Назад<<":
-            jump start_my_list  
-            
+            jump start_my_list
+
 label extra_my_list_sprites:
     menu:
 #        "Толян":
@@ -20,7 +20,7 @@ label extra_my_list_sprites:
             jump extra_my_list_sprites_body
         ">>Назад<<":
             jump extra_my_list
-        
+
 label extra_my_list_sprites_tl:
     menu:
         "Обычный":
@@ -43,7 +43,7 @@ label extra_my_list_sprites_tl:
             jump extra_my_list_sprites_tl
         ">>Назад<<":
             jump extra_my_list_sprites
-            
+
 label extra_my_list_sprites_qr:
     menu:
         "Обычная":
@@ -63,7 +63,7 @@ label extra_my_list_sprites_qr:
             jump extra_my_list_sprites_qr
         ">>Назад<<":
             jump extra_my_list_sprites
-            
+
 label extra_my_list_sprites_nightmare:
     menu:
         "Виола":
@@ -143,7 +143,7 @@ label extra_my_list_sprites_nightmare:
             jump extra_my_list_sprites_nightmare
         ">>Назад<<":
             jump extra_my_list_sprites
-            
+
 label extra_my_list_sprites_uprt:
     menu:
         "Славя":
@@ -157,12 +157,12 @@ label extra_my_list_sprites_uprt:
             jump extra_my_list_sprites_uprt
         ">>Назад<<":
             jump extra_my_list_sprites
-            
+
 label extra_my_list_sprites_body:
     menu:
         "Алиса":
             jump extra_my_list_sprites_body_dv
-        "Мику":
+"""        "Мику":
             jump extra_my_list_sprites_body_mi
         "Ольга Дмитриевна":
             jump extra_my_list_sprites_body_mt
@@ -171,10 +171,10 @@ label extra_my_list_sprites_body:
         "Лена":
             jump extra_my_list_sprites_body_un
         "Ульяна":
-            jump extra_my_list_sprites_body_us
+            jump extra_my_list_sprites_body_us"""
         ">>Назад<<":
             jump extra_my_list_sprites
-        
+
 label extra_my_list_sprites_body_dv:
     menu:
         "Хмурая":
@@ -270,7 +270,7 @@ label extra_my_list_sprites_body_dv:
             jump extra_my_list_sprites_body_dv
         ">>Назад<<":
             jump extra_my_list_sprites_body
-            
+
 label extra_my_list_sprites_body_mi:
     menu:
         "Хмурая":
@@ -428,7 +428,7 @@ label extra_my_list_sprites_body_mi:
             jump extra_my_list_sprites_body_mi
         ">>Назад<<":
             jump extra_my_list_sprites_body
-            
+
 label extra_my_list_sprites_body_mt:
     menu:
         "Обычная":
@@ -437,7 +437,7 @@ label extra_my_list_sprites_body_mt:
             jump extra_my_list_sprites_body_mt_panama
         ">>Назад<<":
             jump extra_my_list_sprites_body
-            
+
 label extra_my_list_sprites_body_mt_panama:
     menu:
         "Хмурая":
@@ -532,7 +532,7 @@ label extra_my_list_sprites_body_mt_panama:
             jump extra_my_list_sprites_body_mt_panama
         ">>Назад<<":
             jump extra_my_list_sprites_body_mt
-            
+
 label extra_my_list_sprites_body_mt_normal:
     menu:
         "Хмурая":
@@ -627,7 +627,7 @@ label extra_my_list_sprites_body_mt_normal:
             jump extra_my_list_sprites_body_mt_normal
         ">>Назад<<":
             jump extra_my_list_sprites_body_mt
-            
+
 label extra_my_list_sprites_body_sl:
     menu:
         "Злость":
@@ -740,7 +740,7 @@ label extra_my_list_sprites_body_sl:
             jump extra_my_list_sprites_body_sl
         ">>Назад<<":
             jump extra_my_list_sprites_body
-            
+
 label extra_my_list_sprites_body_un:
     menu:
         "Злость":
@@ -907,7 +907,7 @@ label extra_my_list_sprites_body_un:
             jump extra_my_list_sprites_body_un
         ">>Назад<<":
             jump extra_my_list_sprites_body
-            
+
 label extra_my_list_sprites_body_us:
     menu:
         "Хмурая":
@@ -1074,4 +1074,3 @@ label extra_my_list_sprites_body_us:
             jump extra_my_list_sprites_body_us
         ">>Назад<<":
             jump extra_my_list_sprites_body
-            
