@@ -270,4 +270,83 @@ label image_my_list:
     show cg uvao_h_cenz
     "cg uvao_h_cenz"
     hide cg
+    show soviet_games
+    "soviet_games"
+    show disclaimer
+    "disclaimer"
+    show splashscreen_day
+    "splashscreen_day"
+    show logo_day
+    "logo_day"
+    show splashscreen_night
+    "splashscreen_night"
+    show logo_night
+    "logo_night"
+    show splashscreen_sunset
+    "splashscreen_sunset"
+    show logo_sunset
+    "logo_sunset"
+    hide cg
+    show achievement
+    "achievement"
+    show achievement3
+    "achievement3"
+    show dv_bad
+    "dv_bad"
+    show dv_good
+    "dv_good"
+    show un_bad
+    "un_bad"
+    show un_good
+    "un_good"
+    show sl_bad
+    "sl_bad"
+    show sl_good
+    "sl_good"
+    show us_bad
+    "us_bad"
+    show us_good
+    "us_good"
+    show main_bad
+    "main_bad"
+    show main_good
+    "main_good"
+    show mi
+    "mi"
+    show uv_city
+    "uv_city"
+    show uv_unknown_fucken_shit
+    "uv_unknown_fucken_shit"
+    show op_back
+    "op_back"
+    show op_sl
+    "op_sl"
+    show op_un
+    "op_un"
+    show op_us
+    "op_us"
+    show op_dv
+    "op_dv"
+    show op_mi
+    "op_mi"
+    show op_uv1
+    "op_uv1"
+    show op_uv2
+    "op_uv2"
+    show op_uv3
+    "op_uv3"
+    hide bg
+    show backdrop_text (u"Текст")
+    "backdrop_text"
+    show cg lvl_1
+    "cg lvl_1"
+    show cg lvl_2_lena_win
+    "cg lvl_2_lena_win"
+    show cg lvl_2_semen_win
+    "cg lvl_2_semen_win"
+    show cg lvl_4_semen_win
+    "cg lvl_4_semen_win"
+    show cg epilogue_us_3
+    "cg epilogue_us_3"
+    hide cg
     jump start_my_list
