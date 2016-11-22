@@ -57,7 +57,7 @@ label music_my_list_dark_side:
             "music_list(\"faceless\")"
             stop music fadeout 1
             jump music_my_list_dark_side
-        "That's Ou Madhouse":
+        "That's Our Madhouse":
             play music music_list["that_s_our_madhouse"] fadein 1
             "music_list(\"that_s_our_madhouse\")"
             stop music fadeout 1
@@ -178,7 +178,7 @@ label music_my_list_bright_side:
             "music_list(\"i_dont_blame_you\")"
             stop music fadeout 1
             jump music_my_list_bright_side
-        "What Do Ypu Think Of Me":
+        "What Do You Think Of Me":
             play music music_list["what_do_you_think_of_me"] fadein 1
             "music_list(\"what_do_you_think_of_me\")"
             stop music fadeout 1
