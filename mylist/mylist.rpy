@@ -1,6 +1,6 @@
 init:
 
-    $ mods["my_list"]=u"How to do a mod: Support list for modders"
+    $ mods["my_list"]=u"How to make a mod: Support list for modders"
 
     $ ss = Character(u'Саманта', color="#c8ffc8", what_color="E2C778", drop_shadow = [ (-1, -1), (1, -1), (-1, 1), (1, 1) ], drop_shadow_color = "#000")
 
@@ -27,16 +27,15 @@ label start_my_list:
         "Бэкграунды":
             jump background_my_list
         "Картинки":
-            jump exit
+            jump image_my_list
         "Анимации":
             jump exit
         "Музыка":
             jump music_my_list
         "Звуки":
             jump exit
-        "Эмбиенты":
+        "Окружающая среда":
             jump exit
-
         ">>Выход<<":
             jump exit
 
@@ -56,7 +55,7 @@ label exit:
             show ss smile casual with dspr
             $ renpy.pause (1)
             hide ss with dissolve
-            jump start_my_list_ru
+            jump start_my_list
 
 label sprites_my_list:
     menu:
@@ -325,7 +324,7 @@ label sprites_my_list_dv:
             jump sprites_my_list_dv_pioneer2
         "Купальник":
             jump sprites_my_list_dv_swim
-        "Экстра":
+        "Голая" if (persistent.hentai == True):
             jump sprites_my_list_dv_extra
         ">>Назад<<":
             jump sprites_my_list
