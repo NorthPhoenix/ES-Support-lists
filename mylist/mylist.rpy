@@ -8,10 +8,10 @@ init:
 
 label my_list:
     if _preferences.language == None:
-        jump my_list_ru
+        jump my_list
     else:
         jump my_list_eng
-label my_list_ru:
+label my_list:
     scene black
     show ss smile casual with dissolve
     ss "Привет, я тебя ждала."
