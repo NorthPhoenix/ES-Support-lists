@@ -180,11 +180,6 @@ label image_my_list3:
             "logo_night"
             hide logo_night
             jump image_my_list3
-        "Пионерка":
-            show pioneer
-            "pioneer"
-            hide pioneer
-            jump image_my_list3
         "Достижения":
             show achievement
             "achievement"
