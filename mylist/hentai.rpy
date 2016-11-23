@@ -1,0 +1,2 @@
+init:
+    $ persistent.hentai = True
