@@ -414,7 +414,7 @@ label music_my_list_eng:
             jump music_my_list_dark_side_eng
         "ES: Bright Side":
             jump music_my_list_bright_side_eng
-        "Экстра":
+        "Extra":
             jump music_my_list_extra_eng
         ">>Back<<":
             jump start_my_listv
