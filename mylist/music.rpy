@@ -417,7 +417,7 @@ label music_my_list_eng:
         "Extra":
             jump music_my_list_extra_eng
         ">>Back<<":
-            jump start_my_listv
+            jump start_my_list_eng
 
 label music_my_list_dark_side_eng:
     menu:
