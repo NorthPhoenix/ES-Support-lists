@@ -3089,24 +3089,6 @@ label sprites_my_list_mt_normal_swim:
             "mt sad swim close"
             hide mt with dspr
             jump sprites_my_list_mt_normal_swim
-        "Испуганная":
-            show mt scared swim far with dspr
-            "mt scared swim"
-            show mt scared swim with dspr
-            "mt scared swim"
-            show mt scared swim close with dspr
-            "mt scared swim close"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_swim
-        "Шокированная":
-            show mt shocked swim far with dspr
-            "mt shocked swim"
-            show mt shocked swim with dspr
-            "mt shocked swim"
-            show mt shocked swim close with dspr
-            "mt shocked swim"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_swim
         "Улыбка":
             show mt smile swim far with dspr
             "mt smile swim far"
@@ -4733,7 +4715,7 @@ label sprites_my_list_dv_swim_eng:
 
 label sprites_my_list_dv_extra_eng:
     menu:
-        "Хмурая":
+        "Angry":
             show dv angry body with dspr
             "dv angry body"
             show dv angry body close with dspr
@@ -7164,24 +7146,6 @@ label sprites_my_list_mt_normal_swim_eng:
             "mt sad swim close"
             hide mt with dspr
             jump sprites_my_list_mt_normal_swim_eng
-        "Scared":
-            show mt scared swim far with dspr
-            "mt scared swim"
-            show mt scared swim with dspr
-            "mt scared swim"
-            show mt scared swim close with dspr
-            "mt scared swim close"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_pioneer_eng
-        "Shocked":
-            show mt shocked swim far with dspr
-            "mt shocked swim"
-            show mt shocked swim with dspr
-            "mt shocked swim"
-            show mt shocked swim close with dspr
-            "mt shocked swim"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_pioneer_eng
         "Smile":
             show mt smile swim far with dspr
             "mt smile swim far"
