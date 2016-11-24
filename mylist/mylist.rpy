@@ -1,6 +1,6 @@
 init:
 
-    $ mods["my_list"]=u"How to make a mod: Support list for modders"
+    $ mods["my_list_language"]=u"How to make a mod: Support list for modders"
 
     $ ss = Character(u'Саманта', color="#c8ffc8", what_color="E2C778", drop_shadow = [ (-1, -1), (1, -1), (-1, 1), (1, 1) ], drop_shadow_color = "#000")
 
@@ -8,14 +8,14 @@ init:
 
     image names = "mods/mylist/image/names.jpg"
 
-label my_list:
-    $ persistent.sprite_time = 'day'
-    $ day_time()
+label my_list_language:
     if _preferences.language == None:
         jump my_list
     else:
         jump my_list_eng
 label my_list:
+    $ persistent.sprite_time = 'day'
+    $ prolog_time()
     scene black
     show ss smile casual with dissolve
     ss "Привет, я тебя ждала."
@@ -4091,6 +4091,8 @@ label sprites_my_list_pi:
 
 #Start of English version
 label my_list_eng:
+    $ persistent.sprite_time = 'day'
+    $ prolog_time()
     scene black
     show ca smile casual with dissolve
     ss "Hi, I was waiting for you!"
@@ -4126,7 +4128,7 @@ label exit_eng:
         "Yes, I do":
             show ca sad casual with dissolve
             ss "Ok..."
-            $ renpy.pause (1)
+            $ renpy.pause (0.5)
             show ca serious casual with dspr
             ss "Just come back soon!"
             return
