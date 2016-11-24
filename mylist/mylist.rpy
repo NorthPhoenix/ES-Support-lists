@@ -4,14 +4,16 @@ init:
 
     $ ss = Character(u'Саманта', color="#c8ffc8", what_color="E2C778", drop_shadow = [ (-1, -1), (1, -1), (-1, 1), (1, 1) ], drop_shadow_color = "#000")
 
+    $ ca = Character(u'Samantha', color="#c8ffc8", what_color="E2C778", drop_shadow = [ (-1, -1), (1, -1), (-1, 1), (1, 1) ], drop_shadow_color = "#000")
+
     image names = "mods/mylist/image/names.jpg"
 
 label my_list:
     if _preferences.language == None:
-        jump my_list
+        jump my_list_ru
     else:
         jump my_list_eng
-label my_list:
+label my_list_ru:
     scene black
     show ss smile casual with dissolve
     ss "Привет, я тебя ждала."
@@ -19,7 +21,7 @@ label my_list:
     ss "Меня зовут Саманта.{w} И я здесь, что бы показать тебе все возможные спрайты, бэкграунды, картинки, музыку, эмбриенты и конечно же звуки."
     show ss grin casual with dspr
     ss "Что ж, давай посмотрим."
-label start_my_list:
+label start_my_list_ru:
     scene black
     menu:
         "Спрайты":
@@ -34,7 +36,7 @@ label start_my_list:
             jump music_my_list
         "Звуки":
             jump exit
-        "Окружающая среда":
+        "Эмбиенты":
             jump exit
         ">>Выход<<":
             jump exit
@@ -55,7 +57,7 @@ label exit:
             show ss smile casual with dspr
             $ renpy.pause (1)
             hide ss with dissolve
-            jump start_my_list
+            jump start_my_list_ru
 
 label sprites_my_list:
     menu:
@@ -649,102 +651,6 @@ label sprites_my_list_dv_swim:
                 jump sprites_my_list_dv_swim
             ">>Назад<<":
                 jump sprites_my_list_dv
-
-label sprites_my_list_dv_extra:
-    menu:
-        "Хмурая":
-            show dv angry body with dspr
-            "dv angry body"
-            show dv angry body close with dspr
-            "dv angry body close"
-            hide dv with dspr
-            jump sprites_my_list_dv_extra
-        "Плачущая":
-            show dv cry body with dspr
-            "dv cry body"
-            show dv cry body close with dspr
-            "dv cry body close"
-            hide dv with dspr
-            jump sprites_my_list_dv_extra
-        "Усмешка":
-            show dv grin body with dspr
-            "dv grin body"
-            show dv grin body close with dspr
-            "dv grin body close"
-            hide dv with dspr
-            jump sprites_my_list_dv_extra
-        "Виноватая":
-            show dv guilty body with dspr
-            "dv guilty body"
-            show dv guilty body close with dspr
-            "dv guilty body close"
-            hide dv with dspr
-            jump sprites_my_list_dv_extra
-        "Смех":
-            show dv laugh body with dspr
-            "dv laugh body"
-            show dv laugh body close with dspr
-            "dv laugh body close"
-            hide dv with dspr
-            jump sprites_my_list_dv_extra
-        "Обычная":
-            show dv normal body with dspr
-            "dv normal body"
-            show dv normal body close with dspr
-            "dv normal body close"
-            hide dv with dspr
-            jump sprites_my_list_dv_extra
-        "Злость":
-            show dv rage body with dspr
-            "dv rage body"
-            show dv rage body close with dspr
-            "dv rage body close"
-            hide dv with dspr
-            jump sprites_my_list_dv_extra
-        "Испуганная":
-            show dv scared body with dspr
-            "dv scared body"
-            show dv scared body close with dspr
-            "dv scared body close"
-            hide dv with dspr
-            jump sprites_my_list_dv_extra
-        "Грустная":
-            show dv sad body with dspr
-            "dv sad body"
-            show dv sad body close with dspr
-            "dv sad body close"
-            hide dv with dspr
-            jump sprites_my_list_dv_extra
-        "Шокированная":
-            show dv shocked body with dspr
-            "dv shocked body"
-            show dv shocked body close with dspr
-            "dv shocked body close"
-            hide dv with dspr
-            jump sprites_my_list_dv_extra
-        "Стесняущаяся":
-            show dv shy body with dspr
-            "dv shy body"
-            show dv shy body close with dspr
-            "dv shy body close"
-            hide dv with dspr
-            jump sprites_my_list_dv_extra
-        "Улыбка":
-            show dv smile body with dspr
-            "dv smile body"
-            show dv smile body close with dspr
-            "dv smile body close"
-            hide dv with dspr
-            jump sprites_my_list_dv_extra
-        "Удивлённая":
-            show dv surprise body with dspr
-            "dv surprise body"
-            show dv surprise body close with dspr
-            "dv surprise body close"
-            hide dv with dspr
-            jump sprites_my_list_dv_extra
-        ">>Назад<<":
-            jump sprites_my_list_dv
 
 label sprites_my_list_sl:
    menu:
@@ -4087,11 +3993,11 @@ label sprites_my_list_pi:
 label my_list_eng:
     scene black
     show ss smile casual with dissolve
-    ss "Hi, I was waiting for you!"
+    ca "Hi, I was waiting for you!"
     show ss grin_smile casual with dspr
-    ss "My name is Samantha,{w} and I'm here to show you all the sprites, backgrounds, pictures, music, ambient and of course sounds of the game."
+    ca "My name is Samantha,{w} and I'm here to show you all the possible sprites, backgrounds, pictures, music, ambient and of course sounds of the game."
     show ss grin casual with dspr
-    ss "Well, let's see."
+    ca "Well, let's see."
 label start_my_list_eng:
     scene black
     menu:
@@ -4100,28 +4006,26 @@ label start_my_list_eng:
         "Background":
             jump background_my_list_eng
         "Images":
-            jump exit_eng
+            jump image_my_list_eng
         "Animations":
             jump exit_eng
         "Music":
-            jump exit_eng
+            jump music_my_list_eng
         "Sound":
             jump exit_eng
         "Ambient":
             jump exit_eng
-        "Extra":
-            jump extra_my_list_eng
         ">>Quit<<":
             jump exit_eng
 
 label exit_eng:
     show ss surprise casual with dspr
-    ss "Do you really want to quit?"
+    ca "Do you really want to quit?"
     hide ss with dspr
     menu:
         "Yes, I do":
             show ss sad casual with dissolve
-            ss "Ok..."
+            ca "Ok..."
             $ renpy.pause (1)
             show ss serious casual with dspr
             ss "Just come back soon!"
@@ -4160,16 +4064,16 @@ label sprites_my_list_eng:
             jump sprites_my_list_pi_eng
         "Samantha":
             show ss sad casual with dspr
-            ss "I'm not in the original sprites of {i}Everlasting Summer.{/i}"
+            ca "I'm not in the original sprites of {i}Everlasting Summer.{/i}"
             show ss normal casual with dspr
-            ss "But you can add me in your mod independently."
+            ca "But you can add me in your mod independently."
             show ss laugh casual with dspr
-            ss "Here are my sprites."
+            ca "Here are my sprites."
             hide ss with dspr
             jump sprites_my_list_ss_eng
         ">>Back<<":
             show ss serious casual with dspr
-            ss "Already seen enough?"
+            ca "Already seen enough?"
             jump start_my_list_eng
 
 label sprites_my_list_ss_eng:
@@ -4399,6 +4303,8 @@ label sprites_my_list_dv_eng:
             jump sprites_my_list_dv_pioneer2_eng
         "Swimsuit":
             jump sprites_my_list_dv_swim_eng
+        "Naked" if (persistent.hentai == True):
+            jump sprites_my_list_dv_extra_eng
         ">>Back<<":
             jump sprites_my_list_eng
 
