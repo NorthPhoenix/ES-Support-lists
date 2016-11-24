@@ -2872,15 +2872,6 @@ label sprites_my_list_mt_normal:
 
 label sprites_my_list_mt_normal_pioneer:
     menu:
-        "Плачущая":
-            show mt cry pioneer far with dspr
-            "mt cry pioneer far"
-            show mt cry pioneer with dspr
-            "mt cry pioneer"
-            show mt cry pioneer close with dspr
-            "mt cry pioneer close"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_pioneer
         "Хмурая":
             show mt angry pioneer far with dspr
             "mt angry pioneer far"
@@ -3010,24 +3001,6 @@ label sprites_my_list_mt_normal_dress:
             "mt sad dress"
             show mt sad dress close with dspr
             "mt sad dress close"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_dress
-        "Испуганная":
-            show mt scared dress far with dspr
-            "mt scared dress"
-            show mt scared dress with dspr
-            "mt scared dress"
-            show mt scared dress close with dspr
-            "mt scared dress close"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_dress
-        "Шокированная":
-            show mt shocked dress far with dspr
-            "mt shocked dress"
-            show mt shocked dress with dspr
-            "mt shocked dress"
-            show mt shocked dress close with dspr
-            "mt shocked dress"
             hide mt with dspr
             jump sprites_my_list_mt_normal_dress
         "Улыбка":
@@ -3177,15 +3150,6 @@ label sprites_my_list_mt_panama_pioneer:
             "mt sad panama pioneer close"
             hide mt with dspr
             jump sprites_my_list_mt_panama_pioneer
-        "Испуганная":
-            show mt scared panama pioneer far with dspr
-            "mt scared panama pioneer"
-            show mt scared panama pioneer with dspr
-            "mt scared panama pioneer"
-            show mt scared panama pioneer close with dspr
-            "mt scared panama pioneer close"
-            hide mt with dspr
-            jump sprites_my_list_mt_panama_pioneer
         "Шокированная":
             show mt shocked panama pioneer far with dspr
             "mt shocked panama pioneer"
@@ -3215,7 +3179,7 @@ label sprites_my_list_mt_panama_pioneer:
             jump sprites_my_list_mt_panama_pioneer
 
         ">>Назад<<":
-            jump sprites_my_list_mt_normal
+            jump sprites_my_list_mt_panama
 
 label sprites_my_list_mt_panama_dress:
     menu:
@@ -3255,24 +3219,6 @@ label sprites_my_list_mt_panama_dress:
             "mt sad panama dress close"
             hide mt with dspr
             jump sprites_my_list_mt_panama_dress
-        "Испуганная":
-            show mt scared panama dress far with dspr
-            "mt scared panama dress"
-            show mt scared panama dress with dspr
-            "mt scared panama dress"
-            show mt scared panama dress close with dspr
-            "mt scared panama dress close"
-            hide mt with dspr
-            jump sprites_my_list_mt_panama_dress
-        "Шокированная":
-            show mt shocked panama dress far with dspr
-            "mt shocked panama dress"
-            show mt shocked panama dress with dspr
-            "mt shocked panama dress"
-            show mt shocked panama dress close with dspr
-            "mt shocked panama dress"
-            hide mt with dspr
-            jump sprites_my_list_mt_panama_dress
         "Улыбка":
             show mt smile panama dress far with dspr
             "mt smile panama dress far"
@@ -3292,7 +3238,7 @@ label sprites_my_list_mt_panama_dress:
             hide mt with dspr
             jump sprites_my_list_mt_panama_dress
         ">>Назад<<":
-            jump sprites_my_list_mt_normal
+            jump sprites_my_list_mt_panama
 
 label sprites_my_list_mt_panama_swim:
     menu:
@@ -3332,24 +3278,6 @@ label sprites_my_list_mt_panama_swim:
             "mt sad panama swim close"
             hide mt with dspr
             jump sprites_my_list_mt_panama_swim
-        "Испуганная":
-            show mt scared panama swim far with dspr
-            "mt scared panama swim"
-            show mt scared panama swim with dspr
-            "mt scared panama swim"
-            show mt scared panama swim close with dspr
-            "mt scared panama swim close"
-            hide mt with dspr
-            jump sprites_my_list_mt_panama_swim
-        "Шокированная":
-            show mt shocked panama swim far with dspr
-            "mt shocked panama swim"
-            show mt shocked panama swim with dspr
-            "mt shocked panama swim"
-            show mt shocked panama swim close with dspr
-            "mt shocked panama swim"
-            hide mt with dspr
-            jump sprites_my_list_mt_panama_swim
         "Улыбка":
             show mt smile panama swim far with dspr
             "mt smile panama swim far"
@@ -3369,7 +3297,7 @@ label sprites_my_list_mt_panama_swim:
             hide mt with dspr
             jump sprites_my_list_mt_panama_swim
         ">>Назад<<":
-            jump sprites_my_list_mt_normal
+            jump sprites_my_list_mt_panama
 
 label sprites_my_list_uv:
     menu:
@@ -4122,6 +4050,7 @@ label exit_eng:
 
 label sprites_my_list_eng:
     menu:
+        "Sprites"
         "Alisa":
             jump sprites_my_list_dv_eng
         "Slavya":
@@ -5289,7 +5218,7 @@ label sprites_my_list_un_eng:
 
 label sprites_my_list_un_pioner_eng:
     menu:
-        "Rage":
+        "Angry(1)":
             show un angry pioneer far with dspr
             "un angry pioneer far"
             show un angry pioneer with dspr
@@ -5298,7 +5227,7 @@ label sprites_my_list_un_pioner_eng:
             "un angry pioneer close"
             hide un with dspr
             jump sprites_my_list_un_pioner_eng
-        "Angry":
+        "Angry(2)":
             show un angry2 pioneer far with dspr
             "un angry2 pioneer far"
             show un angry2 pioneer with dspr
@@ -5623,7 +5552,7 @@ label sprites_my_list_un_dress_eng:
 
 label sprites_my_list_un_sport_eng:
     menu:
-        "Rage":
+        "Angry(1)":
             show un angry sport far with dspr
             "un angry sport far"
             show un angry sport with dspr
@@ -5632,7 +5561,7 @@ label sprites_my_list_un_sport_eng:
             "un angry sport close"
             hide un with dspr
             jump sprites_my_list_un_sport_eng
-        "Angry":
+        "Angry(2)":
             show un angry2 sport far with dspr
             "un angry2 sport far"
             show un angry2 sport with dspr
@@ -5749,7 +5678,7 @@ label sprites_my_list_un_sport_eng:
             "un shy sport close"
             hide un with dspr
             jump sprites_my_list_un_sport_eng
-        "Smile":
+        "Smile(1)":
             show un smile sport far with dspr
             "un smile sport far"
             show un smile sport with dspr
@@ -5790,7 +5719,7 @@ label sprites_my_list_un_sport_eng:
 
 label sprites_my_list_un_swim_eng:
     menu:
-        "Rage":
+        "Angry(1)":
             show un angry swim far with dspr
             "un angry swim far"
             show un angry swim with dspr
@@ -6250,7 +6179,7 @@ label sprites_my_list_us_pioneer_eng:
             "us angry pioneer close"
             hide us with dspr
             jump sprites_my_list_us_pioneer_eng
-        "Caml":
+        "Calm":
             show us calml pioneer far with dspr
             "us calml pioneer far"
             show us calml pioneer with dspr
@@ -6286,7 +6215,7 @@ label sprites_my_list_us_pioneer_eng:
             "us dontlike pioneer close"
             hide us with dspr
             jump sprites_my_list_us_pioneer_eng
-        "Fear":
+        "Scared":
             show us fear pioneer far with dspr
             "us fear pioneer far"
             show us fear pioneer with dspr
@@ -6417,7 +6346,7 @@ label sprites_my_list_us_dress_eng:
             "us angry dress close"
             hide us with dspr
             jump sprites_my_list_us_dress_eng
-        "Caml":
+        "Calm":
             show us calml dress far with dspr
             "us calml dress far"
             show us calml dress with dspr
@@ -6453,7 +6382,7 @@ label sprites_my_list_us_dress_eng:
             "us dontlike dress close"
             hide us with dspr
             jump sprites_my_list_us_dress_eng
-        "Fear":
+        "Scared":
             show us fear dress far with dspr
             "us fear dress far"
             show us fear dress with dspr
@@ -6584,7 +6513,7 @@ label sprites_my_list_us_sport_eng:
             "us angry sport close"
             hide us with dspr
             jump sprites_my_list_us_sport_eng
-        "Caml":
+        "Calm":
             show us calml sport far with dspr
             "us calml sport far"
             show us calml sport with dspr
@@ -6620,7 +6549,7 @@ label sprites_my_list_us_sport_eng:
             "us dontlike sport close"
             hide us with dspr
             jump sprites_my_list_us_sport_eng
-        "Fear":
+        "Scared":
             show us fear sport far with dspr
             "us fear sport far"
             show us fear sport with dspr
@@ -6787,7 +6716,7 @@ label sprites_my_list_us_swim_eng:
             "us dontlike swim close"
             hide us with dspr
             jump sprites_my_list_us_swim_eng
-        "Fear":
+        "Scared":
             show us fear swim far with dspr
             "us fear swim far"
             show us fear swim with dspr
@@ -6929,15 +6858,6 @@ label sprites_my_list_mt_normal_eng:
 
 label sprites_my_list_mt_normal_pioneer_eng:
     menu:
-        "Cry":
-            show mt cry pioneer far with dspr
-            "mt cry pioneer far"
-            show mt cry pioneer with dspr
-            "mt cry pioneer"
-            show mt cry pioneer close with dspr
-            "mt cry pioneer close"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_pioneer_eng
         "Angry":
             show mt angry pioneer far with dspr
             "mt angry pioneer far"
@@ -7069,24 +6989,6 @@ label sprites_my_list_mt_normal_dress_eng:
             "mt sad dress close"
             hide mt with dspr
             jump sprites_my_list_mt_normal_dress_eng
-        "Scared":
-            show mt scared dress far with dspr
-            "mt scared dress"
-            show mt scared dress with dspr
-            "mt scared dress"
-            show mt scared dress close with dspr
-            "mt scared dress close"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_pioneer_eng
-        "Shocked":
-            show mt shocked dress far with dspr
-            "mt shocked dress"
-            show mt shocked dress with dspr
-            "mt shocked dress"
-            show mt shocked dress close with dspr
-            "mt shocked dress"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_pioneer_eng
         "Smile":
             show mt smile dress far with dspr
             "mt smile dress far"
@@ -7234,15 +7136,6 @@ label sprites_my_list_mt_panama_pioneer_eng:
             "mt sad panama pioneer close"
             hide mt with dspr
             jump sprites_my_list_mt_panama_pioneer_eng
-        "Scared":
-            show mt scared panama pioneer far with dspr
-            "mt scared panama pioneer"
-            show mt scared panama pioneer with dspr
-            "mt scared panama pioneer"
-            show mt scared panama pioneer close with dspr
-            "mt scared panama pioneer close"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_pioneer_eng
         "Shocked":
             show mt shocked panama pioneer far with dspr
             "mt shocked panama pioneer"
@@ -7270,9 +7163,8 @@ label sprites_my_list_mt_panama_pioneer_eng:
             "mt surprise panama pioneer close"
             hide mt with dspr
             jump sprites_my_list_mt_panama_pioneer_eng
-
         ">>Back<<":
-            jump sprites_my_list_mt_normal_eng
+            jump sprites_my_list_mt_panama_eng
 
 label sprites_my_list_mt_panama_dress_eng:
     menu:
@@ -7312,24 +7204,6 @@ label sprites_my_list_mt_panama_dress_eng:
             "mt sad panama dress close"
             hide mt with dspr
             jump sprites_my_list_mt_panama_dress_eng
-        "Scared":
-            show mt scared panama dress far with dspr
-            "mt scared panama dress"
-            show mt scared panama dress with dspr
-            "mt scared panama dress"
-            show mt scared panama dress close with dspr
-            "mt scared panama dress close"
-            hide mt with dspr
-            jump sprites_my_list_mt_panama_dress_eng
-        "Shocked":
-            show mt shocked panama dress far with dspr
-            "mt shocked panama dress"
-            show mt shocked panama dress with dspr
-            "mt shocked panama dress"
-            show mt shocked panama dress close with dspr
-            "mt shocked panama dress"
-            hide mt with dspr
-            jump sprites_my_list_mt_panama_dress_eng
         "Smile":
             show mt smile panama dress far with dspr
             "mt smile panama dress far"
@@ -7349,7 +7223,7 @@ label sprites_my_list_mt_panama_dress_eng:
             hide mt with dspr
             jump sprites_my_list_mt_panama_dress_eng
         ">>Back<<":
-            jump sprites_my_list_mt_normal_eng
+            jump sprites_my_list_mt_panama_eng
 
 label sprites_my_list_mt_panama_swim_eng:
     menu:
@@ -7389,24 +7263,6 @@ label sprites_my_list_mt_panama_swim_eng:
             "mt sad panama swim close"
             hide mt with dspr
             jump sprites_my_list_mt_panama_swim_eng
-        "Scared":
-            show mt scared panama swim far with dspr
-            "mt scared panama swim"
-            show mt scared panama swim with dspr
-            "mt scared panama swim"
-            show mt scared panama swim close with dspr
-            "mt scared panama swim close"
-            hide mt with dspr
-            jump sprites_my_list_mt_panama_swim_eng
-        "Shocked":
-            show mt shocked panama swim far with dspr
-            "mt shocked panama swim"
-            show mt shocked panama swim with dspr
-            "mt shocked panama swim"
-            show mt shocked panama swim close with dspr
-            "mt shocked panama swim"
-            hide mt with dspr
-            jump sprites_my_list_mt_panama_swim_eng
         "Smile":
             show mt smile panama swim far with dspr
             "mt smile panama swim far"
@@ -7426,7 +7282,7 @@ label sprites_my_list_mt_panama_swim_eng:
             hide mt with dspr
             jump sprites_my_list_mt_panama_swim_eng
         ">>Back<<":
-            jump sprites_my_list_mt_normal_eng
+            jump sprites_my_list_mt_panama_eng
 
 label sprites_my_list_uv_eng:
     menu:
