@@ -40,7 +40,7 @@ label start_my_list:
         "Звуки":
             jump exit
         "Окружающая среда":
-            jump exit
+            jump ambience_my_list
         ">>Выход<<":
             jump exit
 
