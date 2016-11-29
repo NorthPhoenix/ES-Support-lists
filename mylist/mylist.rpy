@@ -20,7 +20,7 @@ label my_list:
     show ss smile casual with dissolve
     ss "Привет, я тебя ждала."
     show ss grin_smile casual with dspr
-    ss "Меня зовут Саманта.{w} И я здесь, что бы показать тебе все возможные спрайты, бэкграунды, картинки, музыку, эмбриенты и конечно же звуки."
+    ss "Меня зовут Саманта.{w} И я здесь, что бы показать тебе все возможные спрайты, фоны, картинки, музыку, эмбриенты, звуки и анимации."
     show ss grin casual with dspr
     ss "Что ж, давай посмотрим."
 label start_my_list:
@@ -29,7 +29,7 @@ label start_my_list:
         "Выберите раздел"
         "Спрайты":
             jump sprites_my_list
-        "Бэкграунды":
+        "Фоны":
             jump background_my_list
         "Картинки":
             jump image_my_list
@@ -37,8 +37,8 @@ label start_my_list:
             jump animation_my_list
         "Музыка":
             jump music_my_list
-        "Звуки":
-            jump exit
+        "Звуковые эфекты":
+            jump sound_my_list
         "Окружающая среда":
             jump ambience_my_list
         ">>Выход<<":
@@ -4007,7 +4007,7 @@ label my_list_eng:
     show ca smile casual with dissolve
     ss "Hi, I was waiting for you!"
     show ca grin_smile casual with dspr
-    ss "My name is Samantha,{w} and I'm here to show you all the sprites, backgrounds, pictures, music, ambient and of course sounds of the game."
+    ss "My name is Samantha{w}, and I'm here to show you all the sprites, backgrounds, pictures, music, ambient, sounds and animations of the game."
     show ca grin casual with dspr
     ss "Well, let's see."
 label start_my_list_eng:
