@@ -683,6 +683,8 @@ label image_my_list_uv:
         "Эпилог Юли":
             show cg epilogue_uv_2
             "cg epilogue_uv_2"
+            show cg epilogue_uv_2
+            "cg epilogue_uv_2"
             hide cg
             jump image_my_list_uv
         "Юля (хентай)" if (persistent.hentai == True):
@@ -1410,6 +1412,8 @@ label image_my_list_uv_eng:
             hide cg
             jump image_my_list_uv_eng
         "Эпилог Юли":
+            show cg epilogue_uv_2
+            "cg epilogue_uv_2"
             show cg epilogue_uv_2
             "cg epilogue_uv_2"
             hide cg
