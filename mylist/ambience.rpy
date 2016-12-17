@@ -276,7 +276,7 @@ label ambience_my_list_med:
 
 label ambience_my_list_mc:
     menu:
-        "Медпункт"
+        "Музыкальный клуб"
         "День":
             play ambience ambience_music_club_day fadein 1
             "ambience_music_club_day"
