@@ -5,7 +5,7 @@ label sound_my_list:
             play sound sfx_achievement
             "sfx_achievement"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         "Алиса":
             play sound sfx_alisa_falls
             "sfx_alisa_falls"
@@ -16,29 +16,29 @@ label sound_my_list:
             play sound sfx_alisa_picklock
             "sfx_alisa_picklock"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         "Злая Ульяна":
             play sound sfx_angry_ulyana
             "sfx_angry_ulyana"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         "Взмах арматурой":
             play sound sfx_armature_swish
             "sfx_armature_swish"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         "Скрип кровати":
             play sound sfx_bed_squeak1
             "sfx_bed_squeak1"
             play sound sfx_bed_squeak2
             "sfx_bed_squeak2"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         "Одеяло":
             play sound sfx_blanket_off_stand
             "sfx_blanket_off_stand"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         "Свеча":
             play sound sfx_blow_out_candle
             "sfx_blow_out_candle"
@@ -47,69 +47,69 @@ label sound_my_list:
             play sound sfx_match_candle
             "sfx_match_candle"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         "Лодка":
             play sound sfx_boat_impact
             "sfx_boat_impact"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         "Удар по телу":
             play sound sfx_body_bump
             "sfx_body_bump"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         "Упавшее тело":
             play sound sfx_bodyfall_1
             "sfx_bodyfall_1"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         "Ломание костей":
             play sound sfx_bones_breaking
             "sfx_bones_breaking"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         "Борщ":
             play sound sfx_borshtch
             "sfx_borshtch"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         "Бросок":
             play sound sfx_brass_drop
             "sfx_brass_drop"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         "Разбившийся поднос":
             play sound sfx_break_cupboard
             "sfx_break_cupboard"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         "Разбившийся фонарь":
             play sound sfx_break_flashlight
             "sfx_break_flashlight"
             play sound sfx_break_flashlight_alisa
             "sfx_break_flashlight_alisa"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         "Разбить решётку":
             play sound sfx_break_grid
             "sfx_break_grid"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         "Разбившийся монитор":
             play sound sfx_break_monitor
             "sfx_break_monitor"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         "Разбитое блюдо":
             play sound sfx_broken_dish
             "sfx_broken_dish"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         "Метла":
             play sound sfx_broom_sweep
             "sfx_broom_sweep"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         "Автобус":
             play sound sfx_bus_honk
             "sfx_bus_honk"
@@ -142,7 +142,7 @@ label sound_my_list:
             play sound sfx_intro_bus_transition
             "sfx_intro_bus_transition"
             stop sound
-            jump sound_my_list_eng
+            jump sound_my_list
         ">>Следующая страница<<":
             jump sound_my_list2
         ">>Назад<<":
@@ -284,7 +284,7 @@ label sound_my_list2:
         ">>Следующая страница<<":
             jump sound_my_list3
         ">>Предыдущая страница<<":
-            jump sound_my_list_eng
+            jump sound_my_list
         ">>Назад<<":
             jump start_my_list
 
