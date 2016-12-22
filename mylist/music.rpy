@@ -1,6 +1,5 @@
 label music_my_list:
     menu:
-        "Музыка"
         "ES: Dark Side":
             jump music_my_list_dark_side
         "ES: Bright Side":
@@ -363,7 +362,6 @@ label music_my_list_bright_side3:
 
     label music_my_list_extra:
         menu:
-            "Экстра"
             "Confession Oboe":
                 play music music_list["confession_oboe"] fadein 1
                 "music_list(\"confession_oboe\")"
@@ -414,10 +412,10 @@ label music_my_list_eng:
             jump music_my_list_dark_side_eng
         "ES: Bright Side":
             jump music_my_list_bright_side_eng
-        "Extra":
+        "Экстра":
             jump music_my_list_extra_eng
         ">>Back<<":
-            jump start_my_list_eng
+            jump start_my_listv
 
 label music_my_list_dark_side_eng:
     menu:
@@ -772,7 +770,6 @@ label music_my_list_bright_side3_eng:
 
     label music_my_list_extra_eng:
         menu:
-            "Extra"
             "Confession Oboe":
                 play music music_list["confession_oboe"] fadein 1
                 "music_list(\"confession_oboe\")"
