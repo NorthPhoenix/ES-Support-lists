@@ -585,7 +585,7 @@ label background_my_list_catacombs:
         ">>Назад<<":
             jump background_my_list_old_building_main
 
-#Start og English version
+#Start of English translation
 label background_my_list_eng:
     menu:
         "Bus stop":
@@ -626,9 +626,9 @@ label background_my_list_eng:
             jump background_my_list_clubs_eng
         "Dining hall":
             jump background_my_list_dining_hall_eng
-        "Pioneers cabins":
+        "Characters' cabins":
             jump background_my_list_pioneers_eng
-        "Houses":
+        "Cabins":
             jump background_my_list_houses_eng
         "Island":
             jump background_my_list_island_eng
@@ -638,7 +638,7 @@ label background_my_list_eng:
             jump background_my_list_stage_eng
         "Library":
             jump background_my_list_library_eng
-        "Square":
+        "Plaza":
             jump background_my_list_square_eng
         "Music club":
             jump background_my_list_musclub_eng
@@ -647,13 +647,13 @@ label background_my_list_eng:
             "bg int_liaz"
             scene black
             jump background_my_list_eng
-        "Old building":
+        "Old buildings":
             jump background_my_list_old_building_main_eng
         "Paths":
             jump background_my_list_path_eng
         "Playground":
             jump background_my_list_playground_eng
-        "Meadow":
+        "Polyana":
             jump background_my_list_polyana_eng
         "Road":
             jump background_my_list_road_eng
@@ -817,13 +817,13 @@ label background_my_list_dining_hall_int_eng:
 
 label background_my_list_pioneers_eng:
     menu:
-        "Slavya's and Zheni's cabin":
+        "Slavi and Zheni's cabin":
             jump background_my_list_pioneers_sl_eng
-        "Alice's and Uliana's cabin":
+        "Alice and Uliana's cabin":
             jump background_my_list_pioneers_dv_eng
-        "Olga Dmitrievna's cabin":
+        "Olga and Dmitrievna's cabin":
             jump background_my_list_pioneers_mt_eng
-        "Lena's and Miku's cabin":
+        "Lena and Miku's cabin":
             jump background_my_list_pioneers_un_eng
         ">>Back<<":
             jump background_my_list_eng
@@ -981,7 +981,7 @@ label background_my_list_square_eng:
             "bg ext_square_night"
             scene black
             jump background_my_list_square_eng
-        "Party":
+        "Part":
             scene bg ext_square_night_party
             "bg ext_square_night_party"
             scene bg ext_square_night_party2
