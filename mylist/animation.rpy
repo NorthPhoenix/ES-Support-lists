@@ -199,6 +199,8 @@ label animation_my_list_frame:
             "anim stars_1"
             show anim stars_3
             "anim stars_3"
+            show anim stars_3o
+            "anim stars_3o"
             hide anim
             jump animation_my_list_frame
         ">>Назад<<":
@@ -251,3 +253,202 @@ label animation_my_list_together:
             jump animation_my_list_together
         ">>Назад<<":
             jump animation_my_list
+
+label animation_my_list_eng:
+    menu:
+        "Animations"
+        "By frames":
+            jump animation_my_list_eng_frame_eng
+        "Working animation":
+            jump animation_my_list_eng_together_eng
+        ">>Back<<":
+            jump start_my_list_eng
+
+label animation_my_list_eng_frame_eng:
+    menu:
+        "Frames"
+        "Blinking":
+            show bg white
+            show anim blink_down
+            "anim blink_down (black)"
+            show anim blink_up
+            "anim blink_up (black)"
+            hide anim
+            show bg black
+            jump animation_my_list_eng_frame_eng
+        "Candle":
+            show anim candle_1
+            "anim candle_1"
+            show anim candle_2
+            "anim candle_2"
+            hide anim
+            jump animation_my_list_eng_frame_eng
+        "Intro":
+            show anim intro_1
+            "anim intro_1"
+            show anim intro_2
+            "anim intro_2"
+            show anim intro_3
+            "anim intro_3"
+            show anim intro_4
+            "anim intro_4"
+            show anim intro_5
+            "anim intro_5"
+            show anim intro_6
+            "anim intro_6"
+            show anim intro_7
+            "anim intro_7"
+            show anim intro_8
+            "anim intro_8"
+            show anim intro_9
+            "anim intro_9"
+            show anim intro_10
+            "anim intro_10"
+            show anim intro_11
+            "anim intro_11"
+            show anim intro_12
+            "anim intro_12"
+            show anim intro_13
+            "anim intro_13"
+            show anim intro_14
+            "anim intro_14"
+            show anim intro_15
+            "anim intro_15"
+            show anim intro_16
+            "anim intro_16"
+            hide anim
+            jump animation_my_list_eng_frame_eng
+        "Owl":
+            show anim owl_1
+            "anim owl_1"
+            show anim owl_2
+            "anim owl_2"
+            hide anim
+            jump animation_my_list_eng_frame_eng
+        "Prologue":
+            show anim prolog_1
+            "anim prolog_1"
+            show anim prolog_2
+            "anim prolog_2"
+            show anim prolog_3
+            "anim prolog_3"
+            show anim prolog_4
+            "anim prolog_4"
+            show anim prolog_5
+            "anim prolog_5"
+            show anim prolog_10
+            "anim prolog_10"
+            show anim prolog_11
+            "anim prolog_11"
+            show anim prolog_14
+            "anim prolog_14"
+            show anim prolog_15
+            "anim prolog_15"
+            hide anim
+            jump animation_my_list_eng_frame_eng
+        "Rippling":
+            show anim prologue_1
+            "anim prologue_1"
+            show anim prologue_2
+            "anim prologue_2"
+            show anim prologue_3
+            "anim prologue_3"
+            hide anim
+            jump animation_my_list_eng_frame_eng
+        "Keyboard":
+            show anim prologue_keyboard_1
+            "anim prologue_keyboard_1"
+            show anim prologue_keyboard_2
+            "anim prologue_keyboard_2"
+            show anim prologue_keyboard_3
+            "anim prologue_keyboard_3"
+            show anim prologue_keyboard_4
+            "anim prologue_keyboard_4"
+            hide anim
+            jump animation_my_list_eng_frame_eng
+        "Monitor and keyboard":
+            show anim prologue_keyboard_monitor_1
+            "anim prologue_keyboard_monitor_1"
+            show anim prologue_keyboard_monitor_2
+            "anim prologue_keyboard_monitor_2"
+            show anim prologue_keyboard_monitor_3
+            "anim prologue_keyboard_monitor_3"
+            show anim prologue_keyboard_monitor_4
+            "anim prologue_keyboard_monitor_4"
+            hide anim
+            jump animation_my_list_eng_frame_eng
+        "Monitor":
+            show anim prologue_monitor_1
+            "anim prologue_monitor_1"
+            show anim prologue_monitor_2
+            "anim prologue_monitor_2"
+            show anim prologue_monitor_3
+            "anim prologue_monitor_3"
+            show anim prologue_monitor_4
+            "anim prologue_monitor_4"
+            hide anim
+            jump animation_my_list_eng_frame_eng
+        "Snow":
+            show anim snow
+            "anim snow"
+            hide anim
+            jump animation_my_list_eng_frame_eng
+        "Stars":
+            show anim stars_1
+            "anim stars_1"
+            show anim stars_3
+            "anim stars_3"
+            show anim stars_3o
+            "anim stars_3o"
+            hide anim
+            jump animation_my_list_eng_frame_eng
+        ">>Back<<":
+            jump animation_my_list_eng
+
+label animation_my_list_eng_together_eng:
+    menu:
+        "Working animation"
+        "Blinking":
+            show bg white
+            show blinking
+            "blinking"
+            hide blinking
+            show bg black
+            jump animation_my_list_eng_together_eng
+        "Candle":
+            show candle_my_list
+            pause
+            hide candle_my_list
+            jump animation_my_list_eng_together_eng
+        "Rippling":
+            show ripple
+            pause
+            hide ripple
+            jump animation_my_list_eng_together_eng
+        "Owl":
+            show owl
+            pause
+            hide owl
+            jump animation_my_list_eng_together_eng
+        "Keyboard":
+            show keyboard
+            pause
+            hide keyboard
+            jump animation_my_list_eng_together_eng
+        "Monitor and keyboard":
+            show keyboard_monitor
+            pause
+            hide keyboard_monitor
+            jump animation_my_list_eng_together_eng
+        "Monitor":
+            show monitor
+            pause
+            hide monitor
+            jump animation_my_list_eng_together_eng
+        "Stars":
+            show stars
+            pause
+            hide stars
+            jump animation_my_list_eng_together_eng
+        ">>Back<<":
+            jump animation_my_list_eng
