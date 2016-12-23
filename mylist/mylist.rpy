@@ -1,44 +1,46 @@
 init:
 
-    $ mods["my_list"]=u"How to do a mod: Support list for modders"
+    $ mods["my_list_language"]=u"How to make a mod: Support list for modders"
 
     $ ss = Character(u'Саманта', color="#c8ffc8", what_color="E2C778", drop_shadow = [ (-1, -1), (1, -1), (-1, 1), (1, 1) ], drop_shadow_color = "#000")
 
+    $ ca = Character(u'Samantha', color="#c8ffc8", what_color="E2C778", drop_shadow = [ (-1, -1), (1, -1), (-1, 1), (1, 1) ], drop_shadow_color = "#000")
+
     image names = "mods/mylist/image/names.jpg"
 
-label my_list:
+label my_list_language:
     if _preferences.language == None:
-        jump my_list_ru
+        jump my_list
     else:
         jump my_list_eng
-label my_list_ru:
+label my_list:
+    $ persistent.sprite_time = 'day'
+    $ prolog_time()
     scene black
     show ss smile casual with dissolve
     ss "Привет, я тебя ждала."
     show ss grin_smile casual with dspr
-    ss "Меня зовут Саманта.{w} И я здесь, что бы показать тебе все возможные спрайты, бэкграунды, картинки, музыку, эмбриенты и конечно же звуки."
+    ss "Меня зовут Саманта.{w} И я здесь, что бы показать тебе все возможные спрайты, фоны, картинки, музыку, звуки и анимации."
     show ss grin casual with dspr
     ss "Что ж, давай посмотрим."
 label start_my_list:
     scene black
     menu:
+        "Выберите раздел"
         "Спрайты":
             jump sprites_my_list
-        "Бэкграунды":
+        "Фоны":
             jump background_my_list
         "Картинки":
-            jump exit
+            jump image_my_list
         "Анимации":
-            jump exit
+            jump animation_my_list
         "Музыка":
             jump music_my_list
-        "Звуки":
-            jump exit
-        "Эмбиенты":
-            jump exit
-        "Экстра":
-            jump extra_my_list
-
+        "Звуковые эфекты":
+            jump sound_my_list
+        "Звуки окружающей среды":
+            jump ambience_my_list
         ">>Выход<<":
             jump exit
 
@@ -58,10 +60,11 @@ label exit:
             show ss smile casual with dspr
             $ renpy.pause (1)
             hide ss with dissolve
-            jump start_my_list_ru
+            jump start_my_list
 
 label sprites_my_list:
     menu:
+        "Спрайты"
         "Алиса":
             jump sprites_my_list_dv
         "Славя":
@@ -327,6 +330,8 @@ label sprites_my_list_dv:
             jump sprites_my_list_dv_pioneer2
         "Купальник":
             jump sprites_my_list_dv_swim
+        "Голая" if (persistent.hentai == True):
+            jump sprites_my_list_dv_extra
         ">>Назад<<":
             jump sprites_my_list
 
@@ -650,6 +655,102 @@ label sprites_my_list_dv_swim:
                 jump sprites_my_list_dv_swim
             ">>Назад<<":
                 jump sprites_my_list_dv
+
+label sprites_my_list_dv_extra:
+    menu:
+        "Хмурая":
+            show dv angry body with dspr
+            "dv angry body"
+            show dv angry body close with dspr
+            "dv angry body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra
+        "Плачущая":
+            show dv cry body with dspr
+            "dv cry body"
+            show dv cry body close with dspr
+            "dv cry body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra
+        "Усмешка":
+            show dv grin body with dspr
+            "dv grin body"
+            show dv grin body close with dspr
+            "dv grin body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra
+        "Виноватая":
+            show dv guilty body with dspr
+            "dv guilty body"
+            show dv guilty body close with dspr
+            "dv guilty body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra
+        "Смех":
+            show dv laugh body with dspr
+            "dv laugh body"
+            show dv laugh body close with dspr
+            "dv laugh body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra
+        "Обычная":
+            show dv normal body with dspr
+            "dv normal body"
+            show dv normal body close with dspr
+            "dv normal body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra
+        "Злость":
+            show dv rage body with dspr
+            "dv rage body"
+            show dv rage body close with dspr
+            "dv rage body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra
+        "Испуганная":
+            show dv scared body with dspr
+            "dv scared body"
+            show dv scared body close with dspr
+            "dv scared body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra
+        "Грустная":
+            show dv sad body with dspr
+            "dv sad body"
+            show dv sad body close with dspr
+            "dv sad body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra
+        "Шокированная":
+            show dv shocked body with dspr
+            "dv shocked body"
+            show dv shocked body close with dspr
+            "dv shocked body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra
+        "Стесняущаяся":
+            show dv shy body with dspr
+            "dv shy body"
+            show dv shy body close with dspr
+            "dv shy body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra
+        "Улыбка":
+            show dv smile body with dspr
+            "dv smile body"
+            show dv smile body close with dspr
+            "dv smile body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra
+        "Удивлённая":
+            show dv surprise body with dspr
+            "dv surprise body"
+            show dv surprise body close with dspr
+            "dv surprise body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra
+        ">>Назад<<":
+            jump sprites_my_list_dv
 
 label sprites_my_list_sl:
    menu:
@@ -2771,15 +2872,6 @@ label sprites_my_list_mt_normal:
 
 label sprites_my_list_mt_normal_pioneer:
     menu:
-        "Плачущая":
-            show mt cry pioneer far with dspr
-            "mt cry pioneer far"
-            show mt cry pioneer with dspr
-            "mt cry pioneer"
-            show mt cry pioneer close with dspr
-            "mt cry pioneer close"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_pioneer
         "Хмурая":
             show mt angry pioneer far with dspr
             "mt angry pioneer far"
@@ -2911,24 +3003,6 @@ label sprites_my_list_mt_normal_dress:
             "mt sad dress close"
             hide mt with dspr
             jump sprites_my_list_mt_normal_dress
-        "Испуганная":
-            show mt scared dress far with dspr
-            "mt scared dress"
-            show mt scared dress with dspr
-            "mt scared dress"
-            show mt scared dress close with dspr
-            "mt scared dress close"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_dress
-        "Шокированная":
-            show mt shocked dress far with dspr
-            "mt shocked dress"
-            show mt shocked dress with dspr
-            "mt shocked dress"
-            show mt shocked dress close with dspr
-            "mt shocked dress"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_dress
         "Улыбка":
             show mt smile dress far with dspr
             "mt smile dress far"
@@ -2986,24 +3060,6 @@ label sprites_my_list_mt_normal_swim:
             "mt sad swim"
             show mt sad swim close with dspr
             "mt sad swim close"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_swim
-        "Испуганная":
-            show mt scared swim far with dspr
-            "mt scared swim"
-            show mt scared swim with dspr
-            "mt scared swim"
-            show mt scared swim close with dspr
-            "mt scared swim close"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_swim
-        "Шокированная":
-            show mt shocked swim far with dspr
-            "mt shocked swim"
-            show mt shocked swim with dspr
-            "mt shocked swim"
-            show mt shocked swim close with dspr
-            "mt shocked swim"
             hide mt with dspr
             jump sprites_my_list_mt_normal_swim
         "Улыбка":
@@ -3094,15 +3150,6 @@ label sprites_my_list_mt_panama_pioneer:
             "mt sad panama pioneer close"
             hide mt with dspr
             jump sprites_my_list_mt_panama_pioneer
-        "Испуганная":
-            show mt scared panama pioneer far with dspr
-            "mt scared panama pioneer"
-            show mt scared panama pioneer with dspr
-            "mt scared panama pioneer"
-            show mt scared panama pioneer close with dspr
-            "mt scared panama pioneer close"
-            hide mt with dspr
-            jump sprites_my_list_mt_panama_pioneer
         "Шокированная":
             show mt shocked panama pioneer far with dspr
             "mt shocked panama pioneer"
@@ -3132,7 +3179,7 @@ label sprites_my_list_mt_panama_pioneer:
             jump sprites_my_list_mt_panama_pioneer
 
         ">>Назад<<":
-            jump sprites_my_list_mt_normal
+            jump sprites_my_list_mt_panama
 
 label sprites_my_list_mt_panama_dress:
     menu:
@@ -3172,24 +3219,6 @@ label sprites_my_list_mt_panama_dress:
             "mt sad panama dress close"
             hide mt with dspr
             jump sprites_my_list_mt_panama_dress
-        "Испуганная":
-            show mt scared panama dress far with dspr
-            "mt scared panama dress"
-            show mt scared panama dress with dspr
-            "mt scared panama dress"
-            show mt scared panama dress close with dspr
-            "mt scared panama dress close"
-            hide mt with dspr
-            jump sprites_my_list_mt_panama_dress
-        "Шокированная":
-            show mt shocked panama dress far with dspr
-            "mt shocked panama dress"
-            show mt shocked panama dress with dspr
-            "mt shocked panama dress"
-            show mt shocked panama dress close with dspr
-            "mt shocked panama dress"
-            hide mt with dspr
-            jump sprites_my_list_mt_panama_dress
         "Улыбка":
             show mt smile panama dress far with dspr
             "mt smile panama dress far"
@@ -3209,7 +3238,7 @@ label sprites_my_list_mt_panama_dress:
             hide mt with dspr
             jump sprites_my_list_mt_panama_dress
         ">>Назад<<":
-            jump sprites_my_list_mt_normal
+            jump sprites_my_list_mt_panama
 
 label sprites_my_list_mt_panama_swim:
     menu:
@@ -3249,24 +3278,6 @@ label sprites_my_list_mt_panama_swim:
             "mt sad panama swim close"
             hide mt with dspr
             jump sprites_my_list_mt_panama_swim
-        "Испуганная":
-            show mt scared panama swim far with dspr
-            "mt scared panama swim"
-            show mt scared panama swim with dspr
-            "mt scared panama swim"
-            show mt scared panama swim close with dspr
-            "mt scared panama swim close"
-            hide mt with dspr
-            jump sprites_my_list_mt_panama_swim
-        "Шокированная":
-            show mt shocked panama swim far with dspr
-            "mt shocked panama swim"
-            show mt shocked panama swim with dspr
-            "mt shocked panama swim"
-            show mt shocked panama swim close with dspr
-            "mt shocked panama swim"
-            hide mt with dspr
-            jump sprites_my_list_mt_panama_swim
         "Улыбка":
             show mt smile panama swim far with dspr
             "mt smile panama swim far"
@@ -3286,7 +3297,7 @@ label sprites_my_list_mt_panama_swim:
             hide mt with dspr
             jump sprites_my_list_mt_panama_swim
         ">>Назад<<":
-            jump sprites_my_list_mt_normal
+            jump sprites_my_list_mt_panama
 
 label sprites_my_list_uv:
     menu:
@@ -3990,12 +4001,14 @@ label sprites_my_list_pi:
 
 #Start of English version
 label my_list_eng:
+    $ persistent.sprite_time = 'day'
+    $ prolog_time()
     scene black
-    show ss smile casual with dissolve
+    show ca smile casual with dissolve
     ss "Hi, I was waiting for you!"
-    show ss grin_smile casual with dspr
-    ss "My name is Samantha,{w} and I'm here to show you all the possible sprites, backgrounds, pictures, music, ambient and of course sounds of the game."
-    show ss grin casual with dspr
+    show ca grin_smile casual with dspr
+    ss "My name is Samantha{w}, and I'm here to show you all the sprites, backgrounds, pictures, music, ambient, sounds and animations of the game."
+    show ca grin casual with dspr
     ss "Well, let's see."
 label start_my_list_eng:
     scene black
@@ -4005,40 +4018,39 @@ label start_my_list_eng:
         "Background":
             jump background_my_list_eng
         "Images":
-            jump exit_eng
+            jump image_my_list_eng
         "Animations":
-            jump exit_eng
+            jump animation_my_list_eng
         "Music":
-            jump exit_eng
+            jump music_my_list_eng
         "Sound":
             jump exit_eng
         "Ambient":
             jump exit_eng
-        "Extra":
-            jump extra_my_list_eng
         ">>Quit<<":
             jump exit_eng
 
 label exit_eng:
-    show ss surprise casual with dspr
+    show ca surprise casual with dspr
     ss "Do you really want to quit?"
-    hide ss with dspr
+    hide ca with dspr
     menu:
         "Yes, I do":
-            show ss sad casual with dissolve
+            show ca sad casual with dissolve
             ss "Ok..."
-            $ renpy.pause (1)
-            show ss serious casual with dspr
+            $ renpy.pause (0.5)
+            show ca serious casual with dspr
             ss "Just come back soon!"
             return
         "No":
-            show ss smile casual with dspr
+            show ca smile casual with dspr
             $ renpy.pause (1)
-            hide ss with dissolve
+            hide ca with dissolve
             jump start_my_list_eng
 
 label sprites_my_list_eng:
     menu:
+        "Sprites"
         "Alisa":
             jump sprites_my_list_dv_eng
         "Slavya":
@@ -4304,6 +4316,8 @@ label sprites_my_list_dv_eng:
             jump sprites_my_list_dv_pioneer2_eng
         "Swimsuit":
             jump sprites_my_list_dv_swim_eng
+        "Naked" if (persistent.hentai == True):
+            jump sprites_my_list_dv_extra_eng
         ">>Back<<":
             jump sprites_my_list_eng
 
@@ -4627,6 +4641,102 @@ label sprites_my_list_dv_swim_eng:
                 jump sprites_my_list_dv_swim_eng
             ">>Back<<":
                 jump sprites_my_list_dv_eng
+
+label sprites_my_list_dv_extra_eng:
+    menu:
+        "Angry":
+            show dv angry body with dspr
+            "dv angry body"
+            show dv angry body close with dspr
+            "dv angry body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra_eng
+        "Cry":
+            show dv cry body with dspr
+            "dv cry body"
+            show dv cry body close with dspr
+            "dv cry body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra_eng
+        "Grin":
+            show dv grin body with dspr
+            "dv grin body"
+            show dv grin body close with dspr
+            "dv grin body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra_eng
+        "Guilty":
+            show dv guilty body with dspr
+            "dv guilty body"
+            show dv guilty body close with dspr
+            "dv guilty body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra_eng
+        "Laugh":
+            show dv laugh body with dspr
+            "dv laugh body"
+            show dv laugh body close with dspr
+            "dv laugh body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra_eng
+        "Normal":
+            show dv normal body with dspr
+            "dv normal body"
+            show dv normal body close with dspr
+            "dv normal body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra_eng
+        "Rage":
+            show dv rage body with dspr
+            "dv rage body"
+            show dv rage body close with dspr
+            "dv rage body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra_eng
+        "Scared":
+            show dv scared body with dspr
+            "dv scared body"
+            show dv scared body close with dspr
+            "dv scared body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra_eng
+        "Sad":
+            show dv sad body with dspr
+            "dv sad body"
+            show dv sad body close with dspr
+            "dv sad body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra_eng
+        "Shocked":
+            show dv shocked body with dspr
+            "dv shocked body"
+            show dv shocked body close with dspr
+            "dv shocked body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra_eng
+        "Shy":
+            show dv shy body with dspr
+            "dv shy body"
+            show dv shy body close with dspr
+            "dv shy body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra_eng
+        "Smile":
+            show dv smile body with dspr
+            "dv smile body"
+            show dv smile body close with dspr
+            "dv smile body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra_eng
+        "Surprised":
+            show dv surprise body with dspr
+            "dv surprise body"
+            show dv surprise body close with dspr
+            "dv surprise body close"
+            hide dv with dspr
+            jump sprites_my_list_dv_extra_eng
+        ">>Назад<<":
+            jump sprites_my_list_dv_eng
 
 label sprites_my_list_sl_eng:
    menu:
@@ -5108,7 +5218,7 @@ label sprites_my_list_un_eng:
 
 label sprites_my_list_un_pioner_eng:
     menu:
-        "Rage":
+        "Angry(1)":
             show un angry pioneer far with dspr
             "un angry pioneer far"
             show un angry pioneer with dspr
@@ -5117,7 +5227,7 @@ label sprites_my_list_un_pioner_eng:
             "un angry pioneer close"
             hide un with dspr
             jump sprites_my_list_un_pioner_eng
-        "Angry":
+        "Angry(2)":
             show un angry2 pioneer far with dspr
             "un angry2 pioneer far"
             show un angry2 pioneer with dspr
@@ -5442,7 +5552,7 @@ label sprites_my_list_un_dress_eng:
 
 label sprites_my_list_un_sport_eng:
     menu:
-        "Rage":
+        "Angry(1)":
             show un angry sport far with dspr
             "un angry sport far"
             show un angry sport with dspr
@@ -5451,7 +5561,7 @@ label sprites_my_list_un_sport_eng:
             "un angry sport close"
             hide un with dspr
             jump sprites_my_list_un_sport_eng
-        "Angry":
+        "Angry(2)":
             show un angry2 sport far with dspr
             "un angry2 sport far"
             show un angry2 sport with dspr
@@ -5568,7 +5678,7 @@ label sprites_my_list_un_sport_eng:
             "un shy sport close"
             hide un with dspr
             jump sprites_my_list_un_sport_eng
-        "Smile":
+        "Smile(1)":
             show un smile sport far with dspr
             "un smile sport far"
             show un smile sport with dspr
@@ -5609,7 +5719,7 @@ label sprites_my_list_un_sport_eng:
 
 label sprites_my_list_un_swim_eng:
     menu:
-        "Rage":
+        "Angry(1)":
             show un angry swim far with dspr
             "un angry swim far"
             show un angry swim with dspr
@@ -6069,7 +6179,7 @@ label sprites_my_list_us_pioneer_eng:
             "us angry pioneer close"
             hide us with dspr
             jump sprites_my_list_us_pioneer_eng
-        "Caml":
+        "Calm":
             show us calml pioneer far with dspr
             "us calml pioneer far"
             show us calml pioneer with dspr
@@ -6105,7 +6215,7 @@ label sprites_my_list_us_pioneer_eng:
             "us dontlike pioneer close"
             hide us with dspr
             jump sprites_my_list_us_pioneer_eng
-        "Fear":
+        "Scared":
             show us fear pioneer far with dspr
             "us fear pioneer far"
             show us fear pioneer with dspr
@@ -6236,7 +6346,7 @@ label sprites_my_list_us_dress_eng:
             "us angry dress close"
             hide us with dspr
             jump sprites_my_list_us_dress_eng
-        "Caml":
+        "Calm":
             show us calml dress far with dspr
             "us calml dress far"
             show us calml dress with dspr
@@ -6272,7 +6382,7 @@ label sprites_my_list_us_dress_eng:
             "us dontlike dress close"
             hide us with dspr
             jump sprites_my_list_us_dress_eng
-        "Fear":
+        "Scared":
             show us fear dress far with dspr
             "us fear dress far"
             show us fear dress with dspr
@@ -6403,7 +6513,7 @@ label sprites_my_list_us_sport_eng:
             "us angry sport close"
             hide us with dspr
             jump sprites_my_list_us_sport_eng
-        "Caml":
+        "Calm":
             show us calml sport far with dspr
             "us calml sport far"
             show us calml sport with dspr
@@ -6439,7 +6549,7 @@ label sprites_my_list_us_sport_eng:
             "us dontlike sport close"
             hide us with dspr
             jump sprites_my_list_us_sport_eng
-        "Fear":
+        "Scared":
             show us fear sport far with dspr
             "us fear sport far"
             show us fear sport with dspr
@@ -6606,7 +6716,7 @@ label sprites_my_list_us_swim_eng:
             "us dontlike swim close"
             hide us with dspr
             jump sprites_my_list_us_swim_eng
-        "Fear":
+        "Scared":
             show us fear swim far with dspr
             "us fear swim far"
             show us fear swim with dspr
@@ -6748,15 +6858,6 @@ label sprites_my_list_mt_normal_eng:
 
 label sprites_my_list_mt_normal_pioneer_eng:
     menu:
-        "Cry":
-            show mt cry pioneer far with dspr
-            "mt cry pioneer far"
-            show mt cry pioneer with dspr
-            "mt cry pioneer"
-            show mt cry pioneer close with dspr
-            "mt cry pioneer close"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_pioneer_eng
         "Angry":
             show mt angry pioneer far with dspr
             "mt angry pioneer far"
@@ -6888,24 +6989,6 @@ label sprites_my_list_mt_normal_dress_eng:
             "mt sad dress close"
             hide mt with dspr
             jump sprites_my_list_mt_normal_dress_eng
-        "Scared":
-            show mt scared dress far with dspr
-            "mt scared dress"
-            show mt scared dress with dspr
-            "mt scared dress"
-            show mt scared dress close with dspr
-            "mt scared dress close"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_pioneer_eng
-        "Shocked":
-            show mt shocked dress far with dspr
-            "mt shocked dress"
-            show mt shocked dress with dspr
-            "mt shocked dress"
-            show mt shocked dress close with dspr
-            "mt shocked dress"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_pioneer_eng
         "Smile":
             show mt smile dress far with dspr
             "mt smile dress far"
@@ -6965,24 +7048,6 @@ label sprites_my_list_mt_normal_swim_eng:
             "mt sad swim close"
             hide mt with dspr
             jump sprites_my_list_mt_normal_swim_eng
-        "Scared":
-            show mt scared swim far with dspr
-            "mt scared swim"
-            show mt scared swim with dspr
-            "mt scared swim"
-            show mt scared swim close with dspr
-            "mt scared swim close"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_pioneer_eng
-        "Shocked":
-            show mt shocked swim far with dspr
-            "mt shocked swim"
-            show mt shocked swim with dspr
-            "mt shocked swim"
-            show mt shocked swim close with dspr
-            "mt shocked swim"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_pioneer_eng
         "Smile":
             show mt smile swim far with dspr
             "mt smile swim far"
@@ -7071,15 +7136,6 @@ label sprites_my_list_mt_panama_pioneer_eng:
             "mt sad panama pioneer close"
             hide mt with dspr
             jump sprites_my_list_mt_panama_pioneer_eng
-        "Scared":
-            show mt scared panama pioneer far with dspr
-            "mt scared panama pioneer"
-            show mt scared panama pioneer with dspr
-            "mt scared panama pioneer"
-            show mt scared panama pioneer close with dspr
-            "mt scared panama pioneer close"
-            hide mt with dspr
-            jump sprites_my_list_mt_normal_pioneer_eng
         "Shocked":
             show mt shocked panama pioneer far with dspr
             "mt shocked panama pioneer"
@@ -7107,9 +7163,8 @@ label sprites_my_list_mt_panama_pioneer_eng:
             "mt surprise panama pioneer close"
             hide mt with dspr
             jump sprites_my_list_mt_panama_pioneer_eng
-
         ">>Back<<":
-            jump sprites_my_list_mt_normal_eng
+            jump sprites_my_list_mt_panama_eng
 
 label sprites_my_list_mt_panama_dress_eng:
     menu:
@@ -7149,24 +7204,6 @@ label sprites_my_list_mt_panama_dress_eng:
             "mt sad panama dress close"
             hide mt with dspr
             jump sprites_my_list_mt_panama_dress_eng
-        "Scared":
-            show mt scared panama dress far with dspr
-            "mt scared panama dress"
-            show mt scared panama dress with dspr
-            "mt scared panama dress"
-            show mt scared panama dress close with dspr
-            "mt scared panama dress close"
-            hide mt with dspr
-            jump sprites_my_list_mt_panama_dress_eng
-        "Shocked":
-            show mt shocked panama dress far with dspr
-            "mt shocked panama dress"
-            show mt shocked panama dress with dspr
-            "mt shocked panama dress"
-            show mt shocked panama dress close with dspr
-            "mt shocked panama dress"
-            hide mt with dspr
-            jump sprites_my_list_mt_panama_dress_eng
         "Smile":
             show mt smile panama dress far with dspr
             "mt smile panama dress far"
@@ -7186,7 +7223,7 @@ label sprites_my_list_mt_panama_dress_eng:
             hide mt with dspr
             jump sprites_my_list_mt_panama_dress_eng
         ">>Back<<":
-            jump sprites_my_list_mt_normal_eng
+            jump sprites_my_list_mt_panama_eng
 
 label sprites_my_list_mt_panama_swim_eng:
     menu:
@@ -7226,24 +7263,6 @@ label sprites_my_list_mt_panama_swim_eng:
             "mt sad panama swim close"
             hide mt with dspr
             jump sprites_my_list_mt_panama_swim_eng
-        "Scared":
-            show mt scared panama swim far with dspr
-            "mt scared panama swim"
-            show mt scared panama swim with dspr
-            "mt scared panama swim"
-            show mt scared panama swim close with dspr
-            "mt scared panama swim close"
-            hide mt with dspr
-            jump sprites_my_list_mt_panama_swim_eng
-        "Shocked":
-            show mt shocked panama swim far with dspr
-            "mt shocked panama swim"
-            show mt shocked panama swim with dspr
-            "mt shocked panama swim"
-            show mt shocked panama swim close with dspr
-            "mt shocked panama swim"
-            hide mt with dspr
-            jump sprites_my_list_mt_panama_swim_eng
         "Smile":
             show mt smile panama swim far with dspr
             "mt smile panama swim far"
@@ -7263,7 +7282,7 @@ label sprites_my_list_mt_panama_swim_eng:
             hide mt with dspr
             jump sprites_my_list_mt_panama_swim_eng
         ">>Back<<":
-            jump sprites_my_list_mt_normal_eng
+            jump sprites_my_list_mt_panama_eng
 
 label sprites_my_list_uv_eng:
     menu:
