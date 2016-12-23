@@ -626,9 +626,9 @@ label background_my_list_eng:
             jump background_my_list_clubs_eng
         "Dining hall":
             jump background_my_list_dining_hall_eng
-        "Characters' cabins":
+        "Pioneers cabins":
             jump background_my_list_pioneers_eng
-        "Cabins":
+        "Houses":
             jump background_my_list_houses_eng
         "Island":
             jump background_my_list_island_eng
@@ -638,7 +638,7 @@ label background_my_list_eng:
             jump background_my_list_stage_eng
         "Library":
             jump background_my_list_library_eng
-        "Plaza":
+        "Square":
             jump background_my_list_square_eng
         "Music club":
             jump background_my_list_musclub_eng
@@ -647,13 +647,13 @@ label background_my_list_eng:
             "bg int_liaz"
             scene black
             jump background_my_list_eng
-        "Old buildings":
+        "Old building":
             jump background_my_list_old_building_main_eng
         "Paths":
             jump background_my_list_path_eng
         "Playground":
             jump background_my_list_playground_eng
-        "Polyana":
+        "Meadow":
             jump background_my_list_polyana_eng
         "Road":
             jump background_my_list_road_eng
@@ -817,11 +817,11 @@ label background_my_list_dining_hall_int_eng:
 
 label background_my_list_pioneers_eng:
     menu:
-        "Slavi and Zheni's cabin":
+        "Slavya and Zheni's cabin":
             jump background_my_list_pioneers_sl_eng
         "Alice and Uliana's cabin":
             jump background_my_list_pioneers_dv_eng
-        "Olga and Dmitrievna's cabin":
+        "Olga Dmitrievna's cabin":
             jump background_my_list_pioneers_mt_eng
         "Lena and Miku's cabin":
             jump background_my_list_pioneers_un_eng
@@ -981,7 +981,7 @@ label background_my_list_square_eng:
             "bg ext_square_night"
             scene black
             jump background_my_list_square_eng
-        "Part":
+        "Party":
             scene bg ext_square_night_party
             "bg ext_square_night_party"
             scene bg ext_square_night_party2
