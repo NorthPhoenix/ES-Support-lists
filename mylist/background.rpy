@@ -1,86 +1,120 @@
 label background_my_list:
     menu:
-        "Автобусная остановка":
-            jump background_my_list_bus_stop
+        "Фоны"
+        "Лагерные здания":
+            jump background_my_list_lz
+        "Лагерные окрестности":
+            jump background_my_list_lo
+        "Автобус":
+            jump background_my_list_bus_start
+        "Город":
+            jump background_my_list_town
+        ">>Назад<<":
+            jump start_my_list
+
+label background_my_list_town:
+    menu:
+        "Город"
+        "Вид из окна автобуса":
+            scene bg intro_xx
+            "bg intro_xx"
+            scene black
+            jump background_my_list_town
+        "Комната Семёна":
+            jump background_my_list_semen
+        ">>Назад<<":
+            jump background_my_list
+
+label background_my_list_lz:
+    menu:
+        "Лагерные здания"
         "Медпункт":
             jump background_my_list_aidpost
         "Баня":
             scene bg ext_bathhouse_night
             "bg ext_bathhouse_night"
             scene black
-            jump background_my_list
-        "Пляж":
-            scene bg ext_beach_day
-            "bg ext_beach_day"
-            scene bg ext_beach_sunset
-            "bg ext_beach_sunset"
-            scene bg ext_beach_night
-            "bg ext_beach_night"
-            scene black
-            jump background_my_list
-        "Автобус":
-            jump background_my_list_bus
+            jump background_my_list_lz
         "Пристань":
             scene bg ext_boathouse_day
             "bg ext_boathouse_day"
             scene bg ext_boathouse_night
             "bg ext_boathouse_night"
             scene black
-            jump background_my_list
-        "Вход в лагерь":
-            scene bg ext_camp_entrance_day
-            "bg ext_camp_entrance_day"
-            scene bg ext_camp_entrance_night
-            "bg ext_camp_entrance_night"
-            scene black
-            jump background_my_list
+            jump background_my_list_lz
         "Клубы":
             jump background_my_list_clubs
         "Столовая":
             jump background_my_list_dining_hall
         "Домики персонажей":
             jump background_my_list_pioneers
-        "Домики":
-            jump background_my_list_houses
-        "Остров Ближний":
-            jump background_my_list_island
-        "Комната Семёна":
-            jump background_my_list_semen
-        "Сцена":
-            jump background_my_list_stage
         "Библиотека":
             jump background_my_list_library
-        "Площадь":
-            jump background_my_list_square
         "Музыкальный клуб":
             jump background_my_list_musclub
+        ">>Назад<<":
+            jump background_my_list
+
+    label background_my_list_lo:
+        menu:
+            "Лагерные окрестности"
+            "Автобусная остановка":
+                jump background_my_list_bus_stop
+            "Пляж":
+                scene bg ext_beach_day
+                "bg ext_beach_day"
+                scene bg ext_beach_sunset
+                "bg ext_beach_sunset"
+                scene bg ext_beach_night
+                "bg ext_beach_night"
+                scene black
+                jump background_my_list_lo
+            "Вход в лагерь":
+                scene bg ext_camp_entrance_day
+                "bg ext_camp_entrance_day"
+                scene bg ext_camp_entrance_night
+                "bg ext_camp_entrance_night"
+                scene black
+                jump background_my_list_lo
+            "Домики":
+                jump background_my_list_houses
+            "Остров Ближний":
+                jump background_my_list_island
+            "Сцена":
+                jump background_my_list_stage
+            "Площадь":
+                jump background_my_list_square
+            "Старый корпус":
+                jump background_my_list_old_building_main
+            "Проходы":
+                jump background_my_list_path
+            "Спортивная площадка":
+                jump background_my_list_playground
+            "Поляна":
+                jump background_my_list_polyana
+            "Дорога":
+                jump background_my_list_road
+            "Умывальники":
+                jump background_my_list_washstand
+            ">>Назад<<":
+                jump background_my_list
+
+label background_my_list_bus_start:
+    menu:
+        "Автобус"
+        "Лагерный автобус":
+            jump background_my_list_bus
         "Лиаз":
             scene bg int_liaz
             "bg int_liaz"
             scene black
-            jump background_my_list
-        "Старый корпус":
-            jump background_my_list_old_building_main
-        "Проходы":
-            jump background_my_list_path
-        "Спортивная площадка":
-            jump background_my_list_playground
-        "Поляна":
-            jump background_my_list_polyana
-        "Дорога":
-            jump background_my_list_road
-        "Умывальники":
-            jump background_my_list_washstand
-        "Город":
-            scene bg intro_xx
-            "bg intro_xx"
-            scene black
-            jump background_my_list
+            jump background_my_list_bus_start
         ">>Назад<<":
-            jump start_my_list
+            jump background_my_list
 
 label background_my_list_bus_stop:
     menu:
+        "Автобусная остановка"
         "Совёнок":
             scene bg ext_no_bus
             "bg ext_no_bus"
@@ -96,16 +130,17 @@ label background_my_list_bus_stop:
             scene black
             jump background_my_list_bus_stop
         ">>Назад<<":
-            jump background_my_list
+            jump background_my_list_lo
 
 label background_my_list_aidpost:
     menu:
+        "Медпункт"
         "Снаружи":
             jump background_my_list_aidpost_ext
         "Внутри":
             jump background_my_list_aidpost_int
         ">>Назад<<":
-            jump background_my_list
+            jump background_my_list_lz
 
 label background_my_list_aidpost_int:
     scene bg int_aidpost_day
@@ -127,6 +162,7 @@ label background_my_list_aidpost_ext:
 
 label background_my_list_bus:
     menu:
+        "Лагерный автобус"
         "Снаружи":
             scene bg ext_bus
             "bg ext_bus"
@@ -135,13 +171,20 @@ label background_my_list_bus:
             scene black
             jump background_my_list_bus
         "Внутри":
+            jump background_my_list_bus_int
+        ">>Назад<<":
+            jump background_my_list
+label background_my_list_bus_int:
+    menu:
+        "Внутри"
+        "Пустой":
             scene bg int_bus
             "bg int_bus"
             scene bg int_bus_night
             "bg int_bus_night"
             scene black
-            jump background_my_list_bus
-        "Люди":
+            jump background_my_list_bus_int
+        "Людный":
             scene bg int_bus_people_day
             "bg int_bus_people_day"
             scene bg int_bus_people_night
@@ -149,12 +192,13 @@ label background_my_list_bus:
             scene bg int_bus_black
             "bg int_bus_black"
             scene black
-            jump background_my_list_bus
+            jump background_my_list_bus_int
         ">>Назад<<":
-            jump background_my_list
+            jump background_my_list_bus
 
 label background_my_list_clubs:
     menu:
+        "Клубы"
         "Снаружи":
             scene bg ext_clubs_day
             "bg ext_clubs_day"
@@ -174,19 +218,21 @@ label background_my_list_clubs:
             scene black
             jump background_my_list_clubs
         ">>Назад<<":
-            jump background_my_list
+            jump background_my_list_lz
 
 label background_my_list_dining_hall:
     menu:
+        "Столовая"
         "Снаружи":
             jump background_my_list_dining_hall_ext
         "Внутри":
             jump background_my_list_dining_hall_int
         ">>Назад<<":
-            jump background_my_list
+            jump background_my_list_lz
 
 label background_my_list_dining_hall_ext:
     menu:
+        "Снаружи"
         "Вдали":
             scene bg ext_dining_hall_away_day
             "bg ext_dining_hall_away_day"
@@ -210,7 +256,8 @@ label background_my_list_dining_hall_ext:
 
 label background_my_list_dining_hall_int:
     menu:
-        "Пустой":
+        "Внутри"
+        "Пустая":
             scene bg int_dining_hall_day
             "bg int_dining_hall_day"
             scene bg int_dining_hall_sunset
@@ -219,7 +266,7 @@ label background_my_list_dining_hall_int:
             "bg int_dining_hall_night"
             scene black
             jump background_my_list_dining_hall_int
-        "Люди":
+        "Людная":
             scene bg int_dining_hall_people_day
             "bg int_dining_hall_people_day"
             scene black
@@ -229,6 +276,7 @@ label background_my_list_dining_hall_int:
 
 label background_my_list_pioneers:
     menu:
+        "Домики персонажей"
         "Домик Слави и Жени":
             jump background_my_list_pioneers_sl
         "Домик Алисы и Ульяны":
@@ -238,10 +286,11 @@ label background_my_list_pioneers:
         "Домик Лены и Мику":
             jump background_my_list_pioneers_un
         ">>Назад<<":
-            jump background_my_list
+            jump background_my_list_lz
 
 label background_my_list_pioneers_sl:
     menu:
+        "Домик Слави и Жени"
         "Снаружи":
             scene bg ext_house_of_sl_day
             "bg ext_house_of_sl_day"
@@ -257,6 +306,7 @@ label background_my_list_pioneers_sl:
 
 label background_my_list_pioneers_dv:
     menu:
+        "Домик Алисы и Ульяны"
         "Снаружи":
             scene bg ext_house_of_dv_day
             "bg ext_house_of_dv_day"
@@ -276,6 +326,7 @@ label background_my_list_pioneers_dv:
 
 label background_my_list_pioneers_mt:
     menu:
+        "Домик Ольги Дмитриевны"
         "Снаружи":
             scene bg ext_house_of_mt_day
             "bg ext_house_of_mt_day"
@@ -305,6 +356,7 @@ label background_my_list_pioneers_mt:
 
 label background_my_list_pioneers_un:
     menu:
+        "Домик Лены и Мику"
         "Снаружи":
             scene bg ext_house_of_un_day
             "bg ext_house_of_un_day"
@@ -326,7 +378,7 @@ label background_my_list_houses:
     scene bg ext_houses_sunset
     "bg ext_houses_sunset"
     scene black
-    jump background_my_list
+    jump background_my_list_lo
 
 label background_my_list_island:
     scene bg ext_island_day
@@ -334,7 +386,7 @@ label background_my_list_island:
     scene bg ext_island_night
     "bg ext_island_night"
     scene black
-    jump background_my_list
+    jump background_my_list_lo
 
 label background_my_list_semen:
     scene bg semen_room
@@ -342,10 +394,11 @@ label background_my_list_semen:
     scene bg semen_room_window
     "bg semen_room_window"
     scene black
-    jump background_my_list
+    jump background_my_list_town
 
 label background_my_list_stage:
     menu:
+        "Сцена"
         "Вдали":
             scene bg ext_stage_big_night
             "bg ext_stage_big_night"
@@ -359,10 +412,11 @@ label background_my_list_stage:
             scene black
             jump background_my_list_stage
         ">>Назад<<":
-            jump background_my_list
+            jump background_my_list_lo
 
 label background_my_list_library:
     menu:
+        "Библиотека"
         "Снаружи":
             scene bg ext_library_day
             "bg ext_library_day"
@@ -380,10 +434,11 @@ label background_my_list_library:
             scene black
             jump background_my_list_library
         ">>Назад<<":
-            jump background_my_list
+            jump background_my_list_lz
 
 label background_my_list_square:
     menu:
+        "Площадь"
         "Обычная":
             scene bg ext_square_day
             "bg ext_square_day"
@@ -406,10 +461,11 @@ label background_my_list_square:
             scene black
             jump background_my_list_square
         ">>Назад<<":
-            jump background_my_list
+            jump background_my_list_lo
 
 label background_my_list_musclub:
     menu:
+        "Музыкальный клуб"
         "Снаружи":
             scene bg ext_musclub_day
             "bg ext_musclub_day"
@@ -421,10 +477,11 @@ label background_my_list_musclub:
             scene black
             jump background_my_list_musclub
         ">>Назад<<":
-            jump background_my_list
+            jump background_my_list_lz
 
 label background_my_list_old_building_main:
     menu:
+        "Старый корпус"
         "Здание":
             jump background_my_list_old_building
         "Шахта":
@@ -432,10 +489,11 @@ label background_my_list_old_building_main:
         "Катакомбы":
             jump background_my_list_catacombs
         ">>Назад<<":
-            jump background_my_list
+            jump background_my_list_lo
 
 label background_my_list_old_building:
     menu:
+        "Здание"
         "Снаружи":
             scene bg ext_old_building_night
             "bg ext_old_building_night"
@@ -453,6 +511,7 @@ label background_my_list_old_building:
 
 label background_my_list_path:
     menu:
+        "Проходы"
         "Проход 1":
             scene bg ext_path_day
             "bg ext_path_day"
@@ -470,7 +529,7 @@ label background_my_list_path:
             scene black
             jump background_my_list_path
         ">>Назад<<":
-            jump background_my_list
+            jump background_my_list_lo
 
 label background_my_list_playground:
     scene bg ext_playground_day
@@ -478,7 +537,7 @@ label background_my_list_playground:
     scene bg ext_playground_night
     "bg ext_playground_night"
     scene black
-    jump background_my_list
+    jump background_my_list_lo
 
 label background_my_list_polyana:
     scene bg ext_polyana_day
@@ -488,7 +547,7 @@ label background_my_list_polyana:
     scene bg ext_polyana_night
     "bg ext_polyana_night"
     scene black
-    jump background_my_list
+    jump background_my_list_lo
 
 label background_my_list_road:
     scene bg ext_road_day
@@ -500,7 +559,7 @@ label background_my_list_road:
     scene bg ext_road_night
     "bg ext_road_night"
     scene black
-    jump background_my_list
+    jump background_my_list_lo
 
 label background_my_list_washstand:
     scene bg ext_washstand_day
@@ -508,10 +567,11 @@ label background_my_list_washstand:
     scene bg ext_washstand2_day
     "bg ext_washstand2_day"
     scene black
-    jump background_my_list
+    jump background_my_list_lo
 
 label background_my_list_mine:
     menu:
+        "Шахта"
         "Пещера":
             scene bg int_mine_coalface
             "bg int_mine_coalface"
@@ -558,6 +618,7 @@ label background_my_list_mine:
 
 label background_my_list_catacombs:
     menu:
+        "Катакомбы"
         "Комната":
             scene bg int_catacombs_living
             "bg int_catacombs_living"
@@ -565,7 +626,7 @@ label background_my_list_catacombs:
             "bg int_catacombs_living_nodoor"
             scene black
             jump background_my_list_catacombs
-        "Вход":
+        "Проход":
             scene bg int_catacombs_entrance
             "bg int_catacombs_entrance"
             scene bg int_catacombs_entrance_red
