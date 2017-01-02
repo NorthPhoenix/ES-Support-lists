@@ -4,8 +4,7 @@ init:
 
     $ ss = Character(u'Саманта', color="#c8ffc8", what_color="E2C778", drop_shadow = [ (-1, -1), (1, -1), (-1, 1), (1, 1) ], drop_shadow_color = "#000")
     $ ca = Character(u'Samantha', color="#c8ffc8", what_color="E2C778", drop_shadow = [ (-1, -1), (1, -1), (-1, 1), (1, 1) ], drop_shadow_color = "#000")
-
-    image names = "mods/mylist/image/names.jpg"
+    
 label my_list_language:
     if _preferences.language == None:
         jump my_list
