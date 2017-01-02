@@ -324,7 +324,7 @@ label music_my_list_bright_side2:
 label music_my_list_bright_side3:
     menu:
         "ES: Bright Side (3)"
-        "She Isk Kind":
+        "She Is Kind":
             play music music_list["she_is_kind"] fadein 1
             "music_list(\"she_is_kind\")"
             stop music fadeout 1
@@ -367,11 +367,6 @@ label music_my_list_bright_side3:
             "Confession Oboe":
                 play music music_list["confession_oboe"] fadein 1
                 "music_list(\"confession_oboe\")"
-                stop music fadeout 1
-                jump music_my_list_extra
-            "Doubt Everyone":
-                play music music_list["doubt_everyone"] fadein 1
-                "music_list(\"doubt_everyone\")"
                 stop music fadeout 1
                 jump music_my_list_extra
             "Kostry":
@@ -734,7 +729,7 @@ label music_my_list_bright_side2_eng:
 label music_my_list_bright_side3_eng:
     menu:
         "ES: Bright Side (3)"
-        "She Isk Kind":
+        "She Is Kind":
             play music music_list["she_is_kind"] fadein 1
             "music_list(\"she_is_kind\")"
             stop music fadeout 1
@@ -779,11 +774,6 @@ label music_my_list_bright_side3_eng:
                 "music_list(\"confession_oboe\")"
                 stop music fadeout 1
                 jump music_my_list_extra
-            "Doubt Everyone":
-                play music music_list["doubt_everyone"] fadein 1
-                "music_list(\"doubt_everyone\")"
-                stop music fadeout 1
-                jump music_my_list_extra_eng
             "Kostry":
                 play music music_list["kostry"] fadein 1
                 "music_list(\"kostry\")"
