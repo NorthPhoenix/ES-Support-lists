@@ -180,6 +180,17 @@ label image_my_list3:
             "logo_night"
             hide logo_night
             jump image_my_list3
+        "Иконка":
+            show icon_large
+            "icon_large"
+            hide icon_large
+            show icon
+            "icon"
+            hide icon
+            show icon16
+            "icon16"
+            hide icon16
+            jump image_my_list3
         "Достижения":
             show achievement
             "achievement"
@@ -187,6 +198,9 @@ label image_my_list3:
             show achievement3
             "achievement3"
             hide achievement3
+            show collector
+            "collector"
+            hide collector
             show dv_bad
             "dv_bad"
             hide dv_bad
@@ -223,6 +237,12 @@ label image_my_list3:
             show uv_city
             "uv_city"
             hide uv_city
+            show uv_good
+            "uv_good"
+            hide uv_good
+            show void
+            "void"
+            hide void
             jump image_my_list3
         "Автобус":
             show op_back
