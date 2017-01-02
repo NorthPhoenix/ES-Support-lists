@@ -1,13 +1,11 @@
 init:
 
-    $ mods["my_list_language"]=u"How to make a mod: Support list for modders"
+    $ mods["my_list"]=u"How to make a mod: Support list for modders"
 
     $ ss = Character(u'Саманта', color="#c8ffc8", what_color="E2C778", drop_shadow = [ (-1, -1), (1, -1), (-1, 1), (1, 1) ], drop_shadow_color = "#000")
-
     $ ca = Character(u'Samantha', color="#c8ffc8", what_color="E2C778", drop_shadow = [ (-1, -1), (1, -1), (-1, 1), (1, 1) ], drop_shadow_color = "#000")
 
     image names = "mods/mylist/image/names.jpg"
-
 label my_list_language:
     if _preferences.language == None:
         jump my_list
@@ -15,13 +13,13 @@ label my_list_language:
         jump my_list_eng
 label my_list:
     $ persistent.sprite_time = 'day'
-    $ prolog_time()
+    $ sunset_time()
     scene black
-    show ss smile casual with dissolve
+    show ss smile2 casual with dissolve
     ss "Привет, я тебя ждала."
-    show ss grin_smile casual with dspr
-    ss "Меня зовут Саманта.{w} И я здесь, что бы показать тебе все возможные спрайты, фоны, картинки, музыку, звуки и анимации."
-    show ss grin casual with dspr
+    ss "Меня зовут Саманта."
+    show ss smile casual with dspr
+    extend " И я здесь, что бы показать тебе все возможные спрайты, фоны, картинки, музыку, звуки и анимации."
     ss "Что ж, давай посмотрим."
 label start_my_list:
     scene black
@@ -4004,12 +4002,12 @@ label my_list_eng:
     $ persistent.sprite_time = 'day'
     $ prolog_time()
     scene black
-    show ca smile casual with dissolve
-    ss "Hi, I was waiting for you!"
-    show ca grin_smile casual with dspr
-    ss "My name is Samantha{w}, and I'm here to show you all the sprites, backgrounds, pictures, music, ambient, sounds and animations of the game."
-    show ca grin casual with dspr
-    ss "Well, let's see."
+    show ss smile2 casual with dissolve
+    ca "Hi, I was waiting for you!"
+    ca "My name is Samantha."
+    show ss smile casual with dspr
+    extend " And I'm here to show you all the sprites, backgrounds, pictures, music, ambient, sounds and animations of the game."
+    ca "Well, let's see."
 label start_my_list_eng:
     scene black
     menu:
@@ -4024,28 +4022,28 @@ label start_my_list_eng:
         "Music":
             jump music_my_list_eng
         "Sound":
-            jump exit_eng
+            jump sound_my_list_eng
         "Ambient":
-            jump exit_eng
+            jump ambience_my_list_eng
         ">>Quit<<":
             jump exit_eng
 
 label exit_eng:
-    show ca surprise casual with dspr
-    ss "Do you really want to quit?"
-    hide ca with dspr
+    show ss surprise casual with dspr
+    ca "Do you really want to quit?"
+    hide ss with dspr
     menu:
         "Yes, I do":
-            show ca sad casual with dissolve
-            ss "Ok..."
+            show ss sad casual with dissolve
+            ca "Ok..."
             $ renpy.pause (0.5)
-            show ca serious casual with dspr
+            show ss serious casual with dspr
             ss "Just come back soon!"
             return
         "No":
-            show ca smile casual with dspr
+            show ss smile casual with dspr
             $ renpy.pause (1)
-            hide ca with dissolve
+            hide ss with dissolve
             jump start_my_list_eng
 
 label sprites_my_list_eng:
@@ -4077,16 +4075,16 @@ label sprites_my_list_eng:
             jump sprites_my_list_pi_eng
         "Samantha":
             show ss sad casual with dspr
-            ss "I'm not in the original sprites of {i}Everlasting Summer.{/i}"
+            ca "I'm not in the original sprites of {i}Everlasting Summer.{/i}"
             show ss normal casual with dspr
-            ss "But you can add me in your mod independently."
+            ca "But you can add me in your mod independently."
             show ss laugh casual with dspr
-            ss "Here are my sprites."
+            ca "Here are my sprites."
             hide ss with dspr
             jump sprites_my_list_ss_eng
         ">>Back<<":
             show ss serious casual with dspr
-            ss "Already seen enough?"
+            ca "Already seen enough?"
             jump start_my_list_eng
 
 label sprites_my_list_ss_eng:
