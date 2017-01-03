@@ -1,59 +1,59 @@
-init:
-    image owl:
-        "anim owl_1" with dissolve
-        0.5
-        "anim owl_2" with dissolve
-        0.5
-        repeat
-    image candle_my_list:
-        "anim candle_1" with dissolve
-        0.7
-        "anim candle_2" with dissolve
-        0.7
-        repeat
-    image ripple:
-        "anim prologue_1"
-        0.1
-        "anim prologue_2"
-        0.1
-        "anim prologue_3"
-        0.1
-        "anim prologue_2"
-        0.1
-        repeat
-    image keyboard:
-        "anim prologue_keyboard_1" with dissolve
-        0.1
-        "anim prologue_keyboard_2" with dissolve
-        0.1
-        "anim prologue_keyboard_3" with dissolve
-        0.1
-        "anim prologue_keyboard_4" with dissolve
-        0.1
-    image keyboard_monitor:
-        "anim prologue_keyboard_monitor_1" with dissolve
-        0.1
-        "anim prologue_keyboard_monitor_2" with dissolve
-        0.1
-        "anim prologue_keyboard_monitor_3" with dissolve
-        0.1
-        "anim prologue_keyboard_monitor_4" with dissolve
-        0.1
-    image monitor:
-        "anim prologue_monitor_1" with dissolve
-        0.1
-        "anim prologue_monitor_2" with dissolve
-        0.1
-        "anim prologue_monitor_3" with dissolve
-        0.1
-        "anim prologue_monitor_4" with dissolve
-        0.1
-    image stars:
-        "anim stars_1" with dissolve
-        0.5
-        "anim stars_3" with dissolve
-        0.5
-        repeat
+#init:
+#    image owl:
+#        "anim owl_1" with dissolve
+#        0.5
+#        "anim owl_2" with dissolve
+#        0.5
+#        repeat
+#    image candle_my_list:
+#        "anim candle_1" with dissolve
+#        0.7
+#        "anim candle_2" with dissolve
+#        0.7
+#        repeat
+#    image ripple:
+#        "anim prologue_1"
+#        0.1
+#        "anim prologue_2"
+#        0.1
+#        "anim prologue_3"
+#        0.1
+#        "anim prologue_2"
+#        0.1
+#        repeat
+#    image keyboard:
+#        "anim prologue_keyboard_1" with dissolve
+#        0.1
+#        "anim prologue_keyboard_2" with dissolve
+#        0.1
+#        "anim prologue_keyboard_3" with dissolve
+#        0.1
+#        "anim prologue_keyboard_4" with dissolve
+#        0.1
+#    image keyboard_monitor:
+#        "anim prologue_keyboard_monitor_1" with dissolve
+#        0.1
+#        "anim prologue_keyboard_monitor_2" with dissolve
+#        0.1
+#        "anim prologue_keyboard_monitor_3" with dissolve
+#        0.1
+#        "anim prologue_keyboard_monitor_4" with dissolve
+#        0.1
+#    image monitor:
+#        "anim prologue_monitor_1" with dissolve
+#        0.1
+#        "anim prologue_monitor_2" with dissolve
+#        0.1
+#        "anim prologue_monitor_3" with dissolve
+#        0.1
+#        "anim prologue_monitor_4" with dissolve
+#        0.1
+#    image stars:
+#        "anim stars_1" with dissolve
+#        0.5
+#        "anim stars_3" with dissolve
+#        0.5
+#        repeat
 
 label animation_my_list:
     menu:
@@ -199,8 +199,6 @@ label animation_my_list_frame:
             "anim stars_1"
             show anim stars_3
             "anim stars_3"
-            show anim stars_3o
-            "anim stars_3o"
             hide anim
             jump animation_my_list_frame
         ">>Назад<<":
@@ -217,38 +215,43 @@ label animation_my_list_together:
             show bg black
             jump animation_my_list_together
         "Свеча":
-            show candle_my_list
-            pause
-            hide candle_my_list
+            show candle
+            "candle"
+            hide candle
             jump animation_my_list_together
         "Рябь":
-            show ripple
-            pause
-            hide ripple
+            show prologue_dream
+            "prologue_dream"
+            hide prologue_dream
             jump animation_my_list_together
         "Сова":
             show owl
-            pause
+            "owl"
             hide owl
             jump animation_my_list_together
         "Клавиатура":
-            show keyboard
-            pause
-            hide keyboard
+            show anim 1_prologue
+            "anim 1_prologue"
+            hide anim
             jump animation_my_list_together
         "Монитор и клавиатура":
-            show keyboard_monitor
-            pause
-            hide keyboard_monitor
+            show anim 2_prologue
+            "anim 2_prologue"
+            hide anim
             jump animation_my_list_together
         "Монитор":
-            show monitor
-            pause
-            hide monitor
+            show anim 3_prologue
+            "anim 3_prologue"
+            hide anim
+            jump animation_my_list_together
+        "Снег":
+            show snow
+            "snow"
+            hide snow
             jump animation_my_list_together
         "Звёзды":
             show stars
-            pause
+            "stars"
             hide stars
             jump animation_my_list_together
         ">>Назад<<":
@@ -416,14 +419,14 @@ label animation_my_list_eng_together_eng:
             show bg black
             jump animation_my_list_eng_together_eng
         "Candle":
-            show candle_my_list
+            show candle
             pause
-            hide candle_my_list
+            hide candle
             jump animation_my_list_eng_together_eng
         "Rippling":
-            show ripple
+            show prologue_dream
             pause
-            hide ripple
+            hide prologue_dream
             jump animation_my_list_eng_together_eng
         "Owl":
             show owl
@@ -431,20 +434,25 @@ label animation_my_list_eng_together_eng:
             hide owl
             jump animation_my_list_eng_together_eng
         "Keyboard":
-            show keyboard
+            show anim 1_prologue
             pause
-            hide keyboard
+            hide anim
             jump animation_my_list_eng_together_eng
         "Monitor and keyboard":
-            show keyboard_monitor
+            show anim 2_prologue
             pause
-            hide keyboard_monitor
+            hide anim
             jump animation_my_list_eng_together_eng
         "Monitor":
-            show monitor
+            show anim 3_prologue
             pause
-            hide monitor
+            hide anim
             jump animation_my_list_eng_together_eng
+        "Snow":
+            show snow
+            "snow"
+            hide snow
+            jump animation_my_list_together
         "Stars":
             show stars
             pause
