@@ -159,16 +159,7 @@ label image_my_list3:
             hide soviet_games
             jump image_my_list3
         "Заставка":
-            show splashscreen_day
-            "splashscreen_day"
-            hide splashscreen_day
-            show splashscreen_sunset
-            "splashscreen_sunset"
-            hide splashscreen_sunset
-            show splashscreen_night
-            "splashscreen_night"
-            hide splashscreen_night
-            jump image_my_list3
+            jump image_my_list3_splashscreen
         "Лого":
             show logo_day
             "logo_day"
@@ -274,8 +265,13 @@ label image_my_list3:
             hide op_uv3
             jump image_my_list3
         "Текст":
-            show backdrop_text (u"Любой текст")
-            "backdrop_text (u\"Любой текст\",параметры...)"
+            show backdrop_text (u"Любой текст"):
+                xpos 0.5
+                ypos 0.5
+            pause
+            $ set_mode_nvl()
+            "backdrop_text (u\"Любой текст\")\n....xpos 0.5\n....ypos 0.5\n\n(\"....\" - четыре пробела)"
+            $ set_mode_adv()
             hide backdrop_text
             jump image_my_list3
         "Карточный турнир":
@@ -295,6 +291,42 @@ label image_my_list3:
             jump image_my_list2
         ">>Назад<<":
             jump start_my_list
+
+label image_my_list3_splashscreen:
+    menu:
+        "Заставка"
+        "День":
+            scene splashscreen_day:
+                pos (0,0)
+                linear 4.0pos (0,-1080)
+            pause
+            $ set_mode_nvl()
+            "scene splashscreen_day:\n....pos (0,0)\n....linear 4.0pos (0,-1080)\n$ renpy.pause(4)\n\n(\"....\" - четыре пробела)"
+            $ set_mode_adv()
+            scene black
+            jump image_my_list3_splashscreen
+        "Закат/Восход":
+            scene splashscreen_sunset:
+                pos (0,0)
+                linear 4.0pos (0,-1080)
+            pause
+            $ set_mode_nvl()
+            "scene splashscreen_sunset:\n....pos (0,0)\n....linear 4.0pos (0,-1080)\n\n(\"....\" - четыре пробела)"
+            $ set_mode_adv()
+            scene black
+            jump image_my_list3_splashscreen
+        "Ночь":
+            scene splashscreen_night:
+                pos (0,0)
+                linear 4.0pos (0,-1080)
+            pause
+            $ set_mode_nvl()
+            "scene splashscreen_night:\n....pos (0,0)\n....linear 4.0pos (0,-1080)\n\n(\"....\" - четыре пробела)"
+            $ set_mode_adv()
+            scene black
+            jump image_my_list3_splashscreen
+        ">>Назад<<":
+            jump image_my_list3
 
 label image_my_list_sl:
     menu:
@@ -425,8 +457,13 @@ label image_my_list_un:
             hide cg
             jump image_my_list_un
         "Суицид":
-            show cg d7_un_suicide
-            "cg d7_un_suicide"
+            show cg d7_un_suicide :
+                pos (0,-360)
+                linear 10.0pos (0,0)
+            pause
+            $ set_mode_nvl()
+            "show cg d7_un_suicide:\n....pos (0,-360)\n....linear 10.0pos (0,0)\n\n(\"....\" - четыре пробела)"
+            $ set_mode_adv()
             hide cg
             jump image_my_list_un
         "Эпилог Лены":
@@ -445,9 +482,15 @@ label image_my_list_dv:
     menu:
         "Алиса"
         "Пляж":
-            show cg d2_2ch_beach
-            "cg d2_2ch_beach"
+            show cg d2_2ch_beach  with dissolve:
+                pos (0,-1920)
+                linear 10.0pos (0,0)
+                linear 2.0pos (0, -250)
+            pause
+            $ set_mode_nvl()
+            "show cg d2_2ch_beach:\n....pos (0,-1920)\n....linear 10.0pos (0,0)\n....linear 2.0pos (0, -250)\n\n(\"....\" - четыре пробела)"
             hide cg
+            $ set_mode_adv()
             jump image_my_list_dv
         "На реке":
             show cg d2_water_dan
