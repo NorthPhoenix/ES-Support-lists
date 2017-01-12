@@ -1,4 +1,12 @@
 label music_my_list:
+    show ss serious casual with dissolve
+    ss "Я должна тебя предупредить!"
+    show ss nosmile casual with dspr
+    ss "В разделе \"Музыка\" вместо квадратных скобок написаны, круглые скобки."
+    ss "Так сделано потому, что в RenPy я не могу писать квадратные скобки."
+    show ss smile2 casual with dspr
+    ss "Так что, если ты видишь \"(\" или \")\"{w}, помни, это - квадратные скобки. "
+    hide ss
     menu:
         "Музыка"
         "ES: Dark Side":
@@ -354,6 +362,16 @@ label music_my_list_bright_side3:
             "music_list(\"just_think\")"
             stop music fadeout 1
             jump music_my_list_bright_side3
+        "Feeling Good":
+            play music music_list["everyday_theme"] fadein 1
+            "music_list(\"everyday_theme\")"
+            stop music fadeout 1
+            jump music_my_list_bright_side3
+        "Confession":
+            play music music_list["confession_oboe"] fadein 1
+            "music_list(\"confession_oboe\")"
+            stop music fadeout 1
+            jump music_my_list_bright_side3
         "ES: Bright Side (1)":
             jump music_my_list_bright_side
         "ES: Bright Side (2)":
@@ -364,11 +382,6 @@ label music_my_list_bright_side3:
     label music_my_list_extra:
         menu:
             "Экстра"
-            "Confession Oboe":
-                play music music_list["confession_oboe"] fadein 1
-                "music_list(\"confession_oboe\")"
-                stop music fadeout 1
-                jump music_my_list_extra
             "Kostry":
                 play music music_list["kostry"] fadein 1
                 "music_list(\"kostry\")"
@@ -387,11 +400,6 @@ label music_my_list_bright_side3:
             "Sparkles":
                 play music music_list["sparkles"] fadein 1
                 "music_list(\"sparkles\")"
-                stop music fadeout 1
-                jump music_my_list_extra
-            "Everyday Theme":
-                play music music_list["everyday_theme"] fadein 1
-                "music_list(\"everyday_theme\")"
                 stop music fadeout 1
                 jump music_my_list_extra
             "Dinner Horn Processed":
@@ -769,7 +777,7 @@ label music_my_list_bright_side3_eng:
     label music_my_list_extra_eng:
         menu:
             "Extra"
-            "Confession Oboe":
+            "Confession":
                 play music music_list["confession_oboe"] fadein 1
                 "music_list(\"confession_oboe\")"
                 stop music fadeout 1
@@ -794,7 +802,7 @@ label music_my_list_bright_side3_eng:
                 "music_list(\"sparkles\")"
                 stop music fadeout 1
                 jump music_my_list_extra_eng
-            "Everyday Theme":
+            "Feeling Good":
                 play music music_list["everyday_theme"] fadein 1
                 "music_list(\"everyday_theme\")"
                 stop music fadeout 1
