@@ -1,18 +1,24 @@
 init:
-
-    $ mods["my_list"]=u"How to make a mod: Support list for modders"
-
+    $ mods["meetss"]=u"How to make a mod: Support list for modders"
+    $ persistent.meetss = False
     $ ss = Character(u'Саманта', color="#c8ffc8", what_color="E2C778", drop_shadow = [ (-1, -1), (1, -1), (-1, 1), (1, 1) ], drop_shadow_color = "#000")
     $ ca = Character(u'Samantha', color="#c8ffc8", what_color="E2C778", drop_shadow = [ (-1, -1), (1, -1), (-1, 1), (1, 1) ], drop_shadow_color = "#000")
-    
+
+label meetss:
+    $ persistent.sprite_time = 'day'
+    $ sunset_time()
+    if not persistent.meetss:
+        jump my_listst
+    elif persistent.meetss:
+        jump my_listnd
+
 label my_list_language:
     if _preferences.language == None:
         jump my_list
-    else:
+    elif _preferences.language == english:
         jump my_list_eng
-label my_list:
-    $ persistent.sprite_time = 'day'
-    $ sunset_time()
+
+label my_listst:
     scene black
     show ss smile2 casual with dissolve
     ss "Привет, я тебя ждала."
@@ -20,6 +26,15 @@ label my_list:
     show ss smile casual with dspr
     extend " И я здесь, что бы показать тебе все возможные спрайты, фоны, картинки, музыку, звуки и анимации."
     ss "Что ж, давай посмотрим."
+    $ persistent.meetss = True
+    jump start_my_list
+
+label my_listnd:
+    scene black
+    show ss smile casual with dspr
+    ss "С возвращением!"
+    jump start_my_list
+
 label start_my_list:
     scene black
     menu:
@@ -996,8 +1011,140 @@ label sprites_my_list_un:
             jump sprites_my_list_un_sport
         "Купальник":
             jump sprites_my_list_un_swim
+        "Голая" if (persistent.hentai == True):
+            jump sprites_my_list_un_extra
         ">>Назад<<":
             jump sprites_my_list
+label sprites_my_list_un_extra:
+    menu:
+        "Злость":
+            show un angry body with dspr
+            "un angry pioneer"
+            show un angry body close with dspr
+            "un angry pioneer close"
+            hide un with dspr
+            jump sprites_my_list_un_extra
+        "Хмурая":
+            show un angry2 body with dspr
+            "un angry2 pioneer"
+            show un angry2 body close with dspr
+            "un angry2 pioneer close"
+            hide un with dspr
+            jump sprites_my_list_un_extra
+        "Улыбка сквозь слёзы":
+            show un cry_smile body with dspr
+            "un cry_smile pioneer"
+            show un cry_smile body close with dspr
+            "un cry_smile pioneer close"
+            hide un with dspr
+            jump sprites_my_list_un_extra
+        "Плачущая":
+            show un cry body with dspr
+            "un cry pioneer"
+            show un cry body close with dspr
+            "un cry pioneer close"
+            hide un with dspr
+            jump sprites_my_list_un_extra
+        "Дьявольская улыбка":
+            show un evil_smile body with dspr
+            "un evil_smile pioneer"
+            show un evil_smile body close with dspr
+            "un evil_smile pioneer close"
+            hide un with dspr
+            jump sprites_my_list_un_extra
+        "Усмешка":
+            show un grin body with dspr
+            "un grin pioneer"
+            show un grin body close with dspr
+            "un grin pioneer close"
+            hide un with dspr
+            jump sprites_my_list_un_extra
+        "Смех":
+            show un laugh body with dspr
+            "un laugh pioneer"
+            show un laugh body close with dspr
+            "un laugh pioneer close"
+            hide un with dspr
+            jump sprites_my_list_un_extra
+        "Обычная":
+            show un normal body with dspr
+            "un normal pioneer"
+            show un normal body close with dspr
+            "un normal pioneer close"
+            hide un with dspr
+            jump sprites_my_list_un_extra
+        "Ярость":
+            show un rage body with dspr
+            "un rage pioneer"
+            show un rage body close with dspr
+            "un rage pioneer close"
+            hide un with dspr
+            jump sprites_my_list_un_extra
+        "Грустная":
+            show un sad body with dspr
+            "un sad pioneer"
+            show un sad body close with dspr
+            "un sad pioneer close"
+            hide un with dspr
+            jump sprites_my_list_un_extra
+        "Испуганная":
+            show un scared body with dspr
+            "un scared pioneer"
+            show un scared body close with dspr
+            "un scared pioneer close"
+            hide un with dspr
+            jump sprites_my_list_un_extra
+        "Серьёзная":
+            show un serious body with dspr
+            "un serious pioneer"
+            show un serious body close with dspr
+            "un serious pioneer close"
+            hide un with dspr
+            jump sprites_my_list_un_extra
+        "Шокированная":
+            show un shocked body with dspr
+            "un shocked pioneer"
+            show un shocked body close with dspr
+            "un shocked pioneer close"
+            hide un with dspr
+            jump sprites_my_list_un_extra
+        "Застенчивая":
+            show un shy body with dspr
+            "un shy pioneer"
+            show un shy body close with dspr
+            "un shy pioneer close"
+            hide un with dspr
+            jump sprites_my_list_un_extra
+        "Улыбка(1)":
+            show un smile body with dspr
+            "un smile pioneer"
+            show un smile body close with dspr
+            "un smile pioneer close"
+            hide un with dspr
+            jump sprites_my_list_un_extra
+        "Улыбка(2)":
+            show un smile2 body with dspr
+            "un smile2 pioneer"
+            show un smile2 body close with dspr
+            "un smile2 pioneer close"
+            hide un with dspr
+            jump sprites_my_list_un_extra
+        "Улыбка(3)":
+            show un smile3 body with dspr
+            "un smile3 pioneer"
+            show un smile3 body close with dspr
+            "un smile3 pioneer close"
+            hide un with dspr
+            jump sprites_my_list_un_extra
+        "Удивлённая":
+            show un surprise body with dspr
+            "un surprise pioneer"
+            show un surprise body close with dspr
+            "un surprise pioneer close"
+            hide un with dspr
+            jump sprites_my_list_un_extra
+        ">>Назад<<":
+            jump sprites_my_list_un
 
 label sprites_my_list_un_pioner:
     menu:
@@ -1037,7 +1184,7 @@ label sprites_my_list_un_pioner:
             "un cry pioneer close"
             hide un with dspr
             jump sprites_my_list_un_pioner
-        "Evil smile":
+        "Дьявольская улыбка":
             show un evil_smile pioneer far with dspr
             "un evil_smile pioneer far"
             show un evil_smile pioneer with dspr
