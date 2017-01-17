@@ -291,64 +291,65 @@ label ambience_my_list_mc:
             jump ambience_my_list
 
 #Start of English translation
+
 label ambience_my_list_eng:
     menu:
-        "Звуки окружающей среды"
-        "Пристань":
+        "Ambient sound"
+        "Boat station":
             jump ambience_my_list_bs_eng
-        "Лагерь":
+        "Camp":
             jump ambience_my_list_c_eng
-        "Вход в лагерь":
+        "Camp entrance":
             jump ambience_my_list_ce_eng
-        "Катакомбы":
+        "Catacombs":
             jump ambience_my_list_catac_eng
-        "Клубы":
+        "Clubs":
             play ambience ambience_clubs_inside_day fadein 1
             "ambience_clubs_inside_day"
             stop ambience
             jump ambience_my_list_eng
-        "Ветер":
+        "Wind":
             play ambience ambience_cold_wind_loop fadein 1
             "ambience_cold_wind_loop"
             stop ambience
             jump ambience_my_list_eng
-        "Сельская местность":
+        "Countryside":
             play ambience ambience_day_countryside_ambience fadein 1
             "ambience_day_countryside_ambience"
             stop ambience
             jump ambience_my_list_eng
-        "Столовая":
+        "Dining hall":
             jump ambience_my_list_dh_eng
-        "Дорога":
+        "Road":
             jump ambience_my_list_r_eng
-        "Лес":
+        "Forest":
             jump ambience_my_list_f_eng
-        "Кузнечики":
+        "Grasshoppers":
             play ambience ambience_grasshoper_clean fadein 1
             "ambience_grasshoper_clean"
             stop ambience
             jump ambience_my_list_eng
-        "Внутри дома":
+        "Inside the cabin":
             jump ambience_my_list_cab_eng
-        "Берег озера":
+        "Lake shore":
             jump ambience_my_list_ls_eng
-        "Библиотека":
+        "Library":
             play ambience ambience_library_day fadein 1
             "ambience_library_day"
             stop ambience
             jump ambience_my_list_eng
-        "Средняя толпа":
+        "Crowd":
             jump ambience_my_list_crowd_eng
-        "Медпункт":
+        "Med. station":
             jump ambience_my_list_med_eng
-        "Музыкальный клуб":
+        "Music club":
             jump ambience_my_list_mc_eng
-        "Старый корпус":
+        "Old camp":
             play ambience ambience_old_camp_outside fadein 1
             "ambience_old_camp_outside"
             stop ambience
             jump ambience_my_list_eng
-        "Игра в футбол":
+        "Soccer":
             play ambience ambience_soccer_play_background fadein 1
             "ambience_soccer_play_background"
             stop ambience
@@ -453,18 +454,18 @@ label ambience_my_list_dh_eng:
 
 label ambience_my_list_r_eng:
     menu:
-        "Дорога"
+        "Road"
         "Day":
             play ambience ambience_ext_road_day fadein 1
             "ambience_ext_road_day"
             stop ambience
             jump ambience_my_list_r_eng
-        "Вечер":
+        "Evening":
             play ambience ambience_ext_road_evening fadein 1
             "ambience_ext_road_evening"
             stop ambience
             jump ambience_my_list_r_eng
-        "Ночь":
+        "Night":
             play ambience ambience_ext_road_night fadein 1
             "ambience_ext_road_night"
             stop ambience
@@ -474,18 +475,18 @@ label ambience_my_list_r_eng:
 
 label ambience_my_list_f_eng:
     menu:
-        "Лес"
+        "Forest"
         "Day":
             play ambience ambience_forest_day fadein 1
             "ambience_forest_day"
             stop ambience
             jump ambience_my_list_f_eng
-        "Вечер":
+        "Evening":
             play ambience ambience_forest_evening fadein 1
             "ambience_forest_evening"
             stop ambience
             jump ambience_my_list_f_eng
-        "Ночь":
+        "Night":
             play ambience ambience_forest_night fadein 1
             "ambience_forest_night"
             stop ambience
@@ -495,18 +496,18 @@ label ambience_my_list_f_eng:
 
 label ambience_my_list_cab_eng:
     menu:
-        "Внутри дома"
+        "Inside the cabin"
         "Day":
             play ambience ambience_int_cabin_day fadein 1
             "ambience_int_cabin_day"
             stop ambience
             jump ambience_my_list_cab_eng
-        "Вечер":
+        "Evening":
             play ambience ambience_int_cabin_evening fadein 1
             "ambience_int_cabin_evening"
             stop ambience
             jump ambience_my_list_cab_eng
-        "Ночь":
+        "Night":
             play ambience ambience_int_cabin_night fadein 1
             "ambience_int_cabin_night"
             stop ambience
@@ -516,7 +517,7 @@ label ambience_my_list_cab_eng:
 
 label ambience_my_list_ls_eng:
     menu:
-        "Берег озера"
+        "Lake shore"
         "Day":
             play ambience ambience_lake_shore_day fadein 1
             "ambience_lake_shore_day"
@@ -527,7 +528,7 @@ label ambience_my_list_ls_eng:
             "ambience_lake_shore_evening"
             stop ambience
             jump ambience_my_list_ls_eng
-        "Ночь":
+        "Night":
             play ambience ambience_lake_shore_night fadein 1
             "ambience_lake_shore_night"
             stop ambience
@@ -538,12 +539,12 @@ label ambience_my_list_ls_eng:
 label ambience_my_list_crowd_eng:
     menu:
         "Толпа"
-        "В помещении":
+        "Indoor":
             play ambience ambience_medium_crowd_indoors_1 fadein 1
             "ambience_medium_crowd_indoors_1"
             stop ambience
             jump ambience_my_list_crowd_eng
-        "На улице":
+        "Outdoor":
             play ambience ambience_medium_crowd_outdoors fadein 1
             "ambience_medium_crowd_outdoors"
             stop ambience
