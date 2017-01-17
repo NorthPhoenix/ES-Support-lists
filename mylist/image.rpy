@@ -671,7 +671,7 @@ label image_my_list_us:
             "cg d4_catac_us_2"
             hide cg
             jump image_my_list_us
-        "Пляж":
+        "Рак":
             show cg d4_us_cancer
             "cg d4_us_cancer"
             hide cg
@@ -746,6 +746,8 @@ label image_my_list_uv:
         "Эпилог Юли":
             show cg epilogue_uv_2
             "cg epilogue_uv_2"
+            show cg epilogue_uv_uv
+            "cg epilogue_uv_uv"
             hide cg
             jump image_my_list_uv
         "Юля (хентай)" if (persistent.hentai == True):
@@ -789,111 +791,112 @@ label image_my_list_me:
         ">>Назад<<":
             jump image_my_list
 
+
 #Start of English translation
 label image_my_list_eng:
     menu:
-        "Страница 1"
-        "Славя":
+        "Page 1"
+        "Slavya":
             jump image_my_list_sl_eng
-        "Лена":
+        "Lena":
             jump image_my_list_un_eng
-        "Алиса":
+        "Alisa":
             jump image_my_list_dv_eng
-        "Мику":
+        "Miku":
             jump image_my_list_mi_eng
-        "Ульяна":
+        "Ulyana":
             jump image_my_list_us_eng
-        "Юля":
+        "Yulya":
             jump image_my_list_uv_eng
-        "Семён":
+        "Semyon":
             jump image_my_list_me_eng
-        "Еда":
+        "Food":
             show cg d1_food_normal
             "cg d1_food_normal"
             show cg d1_food_skolop
             "cg d1_food_skolop"
             hide cg
             jump image_my_list_eng
-        "Кузнечик":
+        "Grasshoopers":
             show cg d1_grasshopper
             "cg d1_grasshopper"
             hide cg
             jump image_my_list_eng
-        "Рена":
+        "Rena":
             show cg d1_rena_sunset
             "cg d1_rena_sunset"
             hide cg
             jump image_my_list_eng
-        "Линейка":
+        "Lineup":
             show cg d2_lineup
             "cg d2_lineup"
             hide cg
             jump image_my_list_eng
-        "Женя":
+        "Zhenya":
             show cg d2_micu_lib
             "cg d2_micu_lib"
             hide cg
             jump image_my_list_eng
-        "Переодевающаяся Ольга (хентай)" if (persistent.hentai == True):
+        "Undressed Olga (hentai)" if (persistent.hentai == True):
             show cg d2_mt_undressed
             "cg d2_mt_undressed"
             show cg d2_mt_undressed_2
             "cg d2_mt_undressed_2"
             hide cg
             jump image_my_list_eng
-        "Страница 2":
+        "Page 2":
             jump image_my_list2_eng
-        "Страница 3":
+        "Page 3":
             jump image_my_list3_eng
-        ">>Назад<<":
+        ">>Back<<":
             jump start_my_list_eng
 
 label image_my_list2_eng:
     menu:
-        "Страница 2"
-        "Дискотека":
+        "Page 2"
+        "Disco":
             show cg d3_disco
             "cg d3_disco"
             hide cg
             jump image_my_list2_eng
-        "Элестроник":
+        "Elektronik":
             show cg d4_el_wash
             "cg d4_el_wash"
             hide cg
             jump image_my_list2_eng
-        "Сидящий Шурик":
+        "Shurik sits":
             show cg d4_sh_sit
             "cg d4_sh_sit"
             hide cg
             jump image_my_list2_eng
-        "Шурик с куском арматуры":
+        "Shurik with armature":
             show cg d4_sh_stay
             "cg d4_sh_stay"
             hide cg
             jump image_my_list2_eng
-        "В лодке":
+        "In boat":
             show cg d5_boat
             "cg d5_boat"
             show cg d5_boat_2
             "cg d5_boat_2"
             hide cg
             jump image_my_list2_eng
-        "Торт":
+        "Cake":
             show cg d5_cake
             "cg d5_cake"
             hide cg
             jump image_my_list2_eng
-        "Робот":
+        "Robot":
             show cg d5_clubs_robot
             "cg d5_clubs_robot"
             hide cg
             jump image_my_list2_eng
-        "Виола":
+        "Viola":
             show cg d5_cs
             "cg d5_cs"
             hide cg
             jump image_my_list2_eng
-        "Курьёз у умывальников (хентай)" if (persistent.hentai == True):
+        "Case near to washstand (hentai)" if (persistent.hentai == True):
             show cg d5_dv_us_wash
             "cg d5_dv_us_wash"
             show cg d5_dv_us_wash_2
@@ -904,7 +907,7 @@ label image_my_list2_eng:
             "cg d5_dv_us_wash_4"
             hide cg
             jump image_my_list2_eng
-        "Драка":
+        "Fight":
             show cg d6_dv_fight
             "cg d6_dv_fight"
             show cg d6_dv_fight_2
@@ -913,34 +916,34 @@ label image_my_list2_eng:
             "cg d6_dv_fight_3"
             hide cg
             jump image_my_list2_eng
-        "Удар":
+        "Punch":
             show cg d6_un_punch
             "cg d6_un_punch"
             hide cg
             jump image_my_list2_eng
-        "Прощание":
+        "Pioneers leaving":
             show cg d7_pioneers_leaving
             "cg d7_pioneers_leaving"
             show cg d7_pioneers_leaving_without_us
             "cg d7_pioneers_leaving_without_us"
             hide cg
             jump image_my_list2_eng
-        "Все вместе":
+        "Together":
             show cg final_all_2
             "cg final_all_2"
             hide cg
             jump image_my_list2_eng
-        "Страница 1":
+        "Page 1":
             jump image_my_list_eng
-        "Страница 3":
+        "Page 3":
             jump image_my_list3_eng
-        ">>Назад<<":
+        ">>Back<<":
             jump start_my_list_eng
 
 label image_my_list3_eng:
     menu:
-        "Страница 3"
-        "Дисклеймер":
+        "Page 3"
+        "Disclaimer":
             show disclaimer
             "disclaimer"
             hide disclaimer
@@ -950,7 +953,7 @@ label image_my_list3_eng:
             "soviet_games"
             hide soviet_games
             jump image_my_list3_eng
-        "Заставка":
+        "Splashscreen":
             show splashscreen_day
             "splashscreen_day"
             hide splashscreen_day
@@ -961,7 +964,7 @@ label image_my_list3_eng:
             "splashscreen_night"
             hide splashscreen_night
             jump image_my_list3_eng
-        "Лого":
+        "Logo":
             show logo_day
             "logo_day"
             hide logo_day
@@ -972,7 +975,7 @@ label image_my_list3_eng:
             "logo_night"
             hide logo_night
             jump image_my_list3_eng
-        "Достижения":
+        "Achievement":
             show achievement
             "achievement"
             hide achievement
@@ -1016,7 +1019,7 @@ label image_my_list3_eng:
             "uv_city"
             hide uv_city
             jump image_my_list3_eng
-        "Автобус":
+        "Bus":
             show op_back
             "op_back"
             hide op_back
@@ -1045,12 +1048,12 @@ label image_my_list3_eng:
             "op_uv3"
             hide op_uv3
             jump image_my_list3_eng
-        "Текст":
+        "Text":
             show backdrop_text (u"Любой текст")
             "backdrop_text (u\"Любой текст\",параметры...)"
             hide backdrop_text
             jump image_my_list3_eng
-        "Карточный турнир":
+        "Cards tournament":
             show cg lvl_1
             "cg lvl_1"
             show cg lvl_2_lena_win
@@ -1061,24 +1064,24 @@ label image_my_list3_eng:
             "cg lvl_4_semen_win"
             hide cg
             jump image_my_list3_eng
-        "Страница 1":
+        "Page 1":
             jump image_my_list_eng
-        "Страница 2":
+        "Page 2":
             jump image_my_list2_eng
-        ">>Назад<<":
+        ">>Back<<":
             jump start_my_list_eng
 
 label image_my_list_sl_eng:
     menu:
-        "Славя"
-        "Ужин со Славей":
+        "Slavya"
+        "Dinner":
             show cg d1_sl_dinner
             "cg d1_sl_dinner"
             show cg d1_sl_dinner_0
             "cg d1_sl_dinner_0"
             hide cg
             jump image_my_list_sl_eng
-        "В лесу":
+        "In the forest":
             show cg d2_slavya_forest
             "cg d2_slavya_forest"
             show cg d6_sl_forest
@@ -1087,60 +1090,60 @@ label image_my_list_sl_eng:
             "cg d6_sl_forest_2"
             hide cg
             jump image_my_list_sl_eng
-        "В бане (хентай)" if (persistent.hentai == True):
+        "In bathhouse (hentai)" if (persistent.hentai == True):
             show cg d3_sl_bathhouse
             "cg d3_sl_bathhouse"
             hide cg
             jump image_my_list_sl_eng
-        "Танец":
+        "Dance":
             show cg d3_sl_dance
             "cg d3_sl_dance"
             hide cg
             jump image_my_list_sl_eng
-        "Вечер":
+        "Evening":
             show cg d3_sl_evening
             "cg d3_sl_evening"
             hide cg
             jump image_my_list_sl_eng
-        "В библиотеке":
+        "In the library":
             show cg d3_sl_library
             "cg d3_sl_library"
             hide cg
             jump image_my_list_sl_eng
-        "Катакомбы":
+        "Catacombs":
             show cg d4_catac_sl
             "cg d4_catac_sl"
             hide cg
             jump image_my_list_sl_eng
-        "В медпункте":
+        "In the aid post":
             show cg d5_sl_sleep
             "cg d5_sl_sleep"
             show cg d5_sl_sleep_2
             "cg d5_sl_sleep_2"
             hide cg
             jump image_my_list_sl_eng
-        "Славя на озере (хентай)" if (persistent.hentai == True):
+        "Slavya in the lake (hentai)" if (persistent.hentai == True):
             show cg d6_sl_swim
             "cg d6_sl_swim"
             show cg d2_sl_swim
             "cg d2_sl_swim"
             hide cg
             jump image_my_list_sl_eng
-        "Славя (хентай)" if (persistent.hentai == True):
+        "Slavya (hentai)" if (persistent.hentai == True):
             show cg d6_sl_hentai_1
             "cg d6_sl_hentai_1"
             show cg d6_sl_hentai_2
             "cg d6_sl_hentai_2"
             hide cg
             jump image_my_list_sl_eng
-        "Утро (хентай)" if (persistent.hentai == True):
+        "Morning (hentai)" if (persistent.hentai == True):
             show cg d7_sl_morning
             "cg d7_sl_morning"
             show cg d7_sl_morning_2
             "cg d7_sl_morning_2"
             hide cg
             jump image_my_list_sl_eng
-        "Эпилог Слави":
+        "Slavya's epilogue":
             show cg epilogue_uv_sl
             "cg epilogue_uv_sl"
             show cg epilogue_sl
@@ -1149,59 +1152,59 @@ label image_my_list_sl_eng:
             "cg epilogue_sl_2"
             hide cg
             jump image_my_list_sl_eng
-        ">>Назад<<":
+        ">>Back<<":
             jump image_my_list_eng
 
 label image_my_list_un_eng:
     menu:
-        "Лена"
-        "Сова":
+        "Lena"
+        "Owl":
             show cg d2_sovenok
             "cg d2_sovenok"
             hide cg
             jump image_my_list_un_eng
-        "Танец":
+        "Dance":
             show cg d3_un_dance
             "cg d3_un_dance"
             hide cg
             jump image_my_list_un_eng
-        "В лесу":
+        "In the forest":
             show cg d3_un_forest
             "cg d3_un_forest"
             hide cg
             jump image_my_list_un_eng
-        "Катакомбы":
+        "Catacombs":
             show cg d4_catac_un
             "cg d4_catac_un"
             hide cg
             jump image_my_list_un_eng
-        "На острове":
+        "On the island":
             show cg d5_un_island
             "cg d5_un_island"
             show cg d5_un_sleep
             "cg d5_un_sleep"
             hide cg
             jump image_my_list_un_eng
-        "Вечер":
+        "Evening":
             show cg d6_un_evening_1
             "cg d6_un_evening_1"
             show cg d6_un_evening_2
             "cg d6_un_evening_2"
             hide cg
             jump image_my_list_un_eng
-        "Лена (хентай)" if (persistent.hentai == True):
+        "Lena (hentai)" if (persistent.hentai == True):
             show cg d7_un_hentai
             "cg d7_un_hentai"
             show cg d7_un_hentai_3
             "cg d7_un_hentai_3"
             hide cg
             jump image_my_list_un_eng
-        "Суицид":
+        "Suicide":
             show cg d7_un_suicide
             "cg d7_un_suicide"
             hide cg
             jump image_my_list_un_eng
-        "Эпилог Лены":
+        "Lena's epilogue":
             show cg epilogue_uv_un
             "cg epilogue_uv_un"
             show cg epilogue_un
@@ -1210,45 +1213,45 @@ label image_my_list_un_eng:
             "cg epilogue_un_good"
             hide cg
             jump image_my_list_un_eng
-        ">>Назад<<":
+        ">>Back<<":
             jump image_my_list_eng
 
 label image_my_list_dv_eng:
     menu:
-        "Алиса"
-        "Пляж":
+        "Alisa"
+        "Beach":
             show cg d2_2ch_beach
             "cg d2_2ch_beach"
             hide cg
             jump image_my_list_dv_eng
-        "На реке":
+        "In the water":
             show cg d2_water_dan
             "cg d2_water_dan"
             hide cg
             jump image_my_list_dv_eng
-        "С электро гитарой":
+        "Electric guitar":
             show cg d3_dv_guitar
             "cg d3_dv_guitar"
             hide cg
             jump image_my_list_dv_eng
-        "На сцене":
+        "Scene":
             show cg d3_dv_scene_1
             "cg d3_dv_scene_1"
             show cg d3_dv_scene_2
             "cg d3_dv_scene_2"
             hide cg
             jump image_my_list_dv_eng
-        "Катакомбы":
+        "Catacombs":
             show cg d4_catac_dv
             "cg d4_catac_dv"
             hide cg
             jump image_my_list_dv_eng
-        "Виновна":
+        "Guilty":
             show cg d4_dv_mt
             "cg d4_dv_mt"
             hide cg
             jump image_my_list_dv_eng
-        "Спор с Алисой":
+        "Argue":
             show cg d5_dv_argue
             "cg d5_dv_argue"
             show cg d5_dv_argue_2
@@ -1257,26 +1260,26 @@ label image_my_list_dv_eng:
             "cg d5_dv_argue_3"
             hide cg
             jump image_my_list_dv_eng
-        "В лесу":
+        "In the forest":
             show cg d5_dv_island
             "cg d5_dv_island"
             hide cg
             jump image_my_list_dv
-        "Алиса (хентай)" if (persistent.hentai == True):
+        "Alisa (hentai)" if (persistent.hentai == True):
             show cg d6_dv_hentai
             "cg d6_dv_hentai"
             show cg d6_dv_hentai_2
             "cg d6_dv_hentai_2"
             hide cg
             jump image_my_list_dv_eng
-        "Привал":
+        "Halt":
             show cg d7_dv
             "cg d7_dv"
             show cg d7_dv_2
             "cg d7_dv_2"
             hide cg
             jump image_my_list_dv_eng
-        "Эпилог Алисы":
+        "Alisa's epilogue":
             show cg epilogue_uv_dv
             "cg epilogue_uv_dv"
             show cg epilogue_dv_2
@@ -1285,35 +1288,35 @@ label image_my_list_dv_eng:
             "cg epilogue_dv_3"
             hide cg
             jump image_my_list_dv_eng
-        ">>Назад<<":
+        ">>Back<<":
             jump image_my_list_eng
 
 label image_my_list_mi_eng:
     menu:
-        "Мику"
-        "Мику под пианино":
+        "Miku"
+        "Miku under the piano":
             show cg d2_miku_piano
             "cg d2_miku_piano"
             show cg d2_miku_piano2
             "cg d2_miku_piano2"
             hide cg
             jump image_my_list_mi_eng
-        "Мику с гитарой":
+        "Miku with guitar":
             show cg d4_mi_guitar
             "cg d4_mi_guitar"
             hide cg
             jump image_my_list_mi_eng
-        "Поющая Мику":
+        "Singing Miku":
             show cg d4_mi_sing
             "cg d4_mi_sing"
             hide cg
             jump image_my_list_mi_eng
-        "Мику":
+        "Miku":
             show cg d5_mi
             "cg d5_mi"
             hide cg
             jump image_my_list_mi_eng
-        "Эпилог Мику":
+        "Miku's epilogue":
             show cg epilogue_uv_mi
             "cg epilogue_uv_mi"
             show cg epilogue_mi_1
@@ -1336,35 +1339,35 @@ label image_my_list_mi_eng:
             "cg epilogue_mi_9"
             hide cg
             jump image_my_list_mi_eng
-        "Мику (хентай)" if (persistent.hentai == True):
+        "Miku (hentai)" if (persistent.hentai == True):
             show cg miku_h_1_cenz
             "cg miku_h_1_cenz"
             show cg miku_h_2_cenz
             "cg miku_h_2_cenz"
             hide cg
             jump image_my_list_mi_eng
-        ">>Назад<<":
+        ">>Back<<":
             jump image_my_list_eng
 
 label image_my_list_us_eng:
     menu:
-        "Ульяна"
-        "Падающая Ульяна":
+        "Ulyana"
+        "Falling Ulyana":
             show cg d2_ussr_falling
             "cg d2_ussr_falling"
             hide cg
             jump image_my_list_us_eng
-        "Футбол":
+        "Soccer":
             show cg d3_soccer
             "cg d3_soccer"
             hide cg
             jump image_my_list_us_eng
-        "Ульяна в столовой":
+        "Ulyana in dining room":
             show cg d3_us_dinner
             "cg d3_us_dinner"
             hide cg
             jump image_my_list_us_eng
-        "Ульяна в библиотеке":
+        "Ulyana in the library":
             show cg d3_us_library_1
             "cg d3_us_library_1"
             show cg d3_us_library_2
@@ -1383,46 +1386,46 @@ label image_my_list_us_eng:
             "cg d5_us_sit"
             hide cg
             jump image_my_list_us_eng
-        "Фильм":
+        "Film":
             show cg d6_us_film
             "cg d6_us_film"
             hide cg
             jump image_my_list_us_eng
-        "Ульяна в лесу":
+        "Ulyana in the forest":
             show cg d3_ussr_catched
             "cg d3_ussr_catched"
             hide cg
             jump image_my_list_us_eng
-        "Катакомбы":
+        "Catacombs":
             show cg d4_catac_us
             "cg d4_catac_us"
             show cg d4_catac_us_2
             "cg d4_catac_us_2"
             hide cg
             jump image_my_list_us_eng
-        "Пляж":
+        "Cancer":
             show cg d4_us_cancer
             "cg d4_us_cancer"
             hide cg
             jump image_my_list_us_eng
-        "Ульяна с проволокой":
+        "Ulyana с проволокой":
             show cg d5_sh_us
             "cg d5_sh_us"
             hide cg
             jump image_my_list_us_eng
-        "Ульяна-призрак":
+        "Ulyana-gost":
             show cg d5_us_ghost
             "cg d5_us_ghost"
             show cg d5_us_ghost_2
             "cg d5_us_ghost_2"
             hide cg
             jump image_my_list_us_eng
-        "Поцелуй от Ульяны":
+        "Ulyana's kiss":
             show cg d5_us_kiss
             "cg d5_us_kiss"
             hide cg
             jump image_my_list_us_eng
-        "Эпилог Ульяны":
+        "Ulyana's epilogue":
             show cg epilogue_uv_us
             "cg epilogue_uv_us"
             show cg epilogue_us
@@ -1433,87 +1436,89 @@ label image_my_list_us_eng:
             "cg epilogue_us_alone"
             hide cg
             jump image_my_list_us_eng
-        ">>Назад<<":
+        ">>Back<<":
             jump image_my_list_eng
 
 label image_my_list_uv_eng:
     menu:
-        "Юля"
-        "Незнакомка":
+        "Yulya"
+        "Stranger":
             show cg d1_uv
             "cg d1_uv"
             show cg d1_uv_2
             "cg d1_uv_2"
             hide cg
             jump image_my_list_uv_eng
-        "День 4":
+        "Day 4":
             show cg d4_uv_1
             "cg d4_uv_1"
             show cg d4_uv
             "cg d4_uv"
             hide cg
             jump image_my_list_uv_eng
-        "День 5":
+        "Day 5":
             show cg d5_uv
             "cg d5_uv"
             show cg d5_uv_2
             "cg d5_uv_2"
             hide cg
             jump image_my_list_uv_eng
-        "День 6":
+        "Day 6":
             show cg d6_uv
             "cg d6_uv"
             show cg d6_uv_2
             "cg d6_uv_2"
             hide cg
             jump image_my_list_uv_eng
-        "День 7":
+        "Day 7":
             show cg d7_uv
             "cg d7_uv"
             hide cg
             jump image_my_list_uv_eng
-        "Эпилог Юли":
+        "Yulya's epilogue":
             show cg epilogue_uv_2
             "cg epilogue_uv_2"
+            show cg epilogue_uv_uv
+            "cg epilogue_uv_uv"
             hide cg
             jump image_my_list_uv_eng
-        "Юля (хентай)" if (persistent.hentai == True):
+        "Yulya (hentai)" if (persistent.hentai == True):
             show cg uvao_h_cenz
             "cg uvao_h_cenz"
             hide cg
             jump image_my_list_uv_eng
-        ">>Назад<<":
+        ">>Back<<":
             jump image_my_list_eng
 
 label image_my_list_me_eng:
     menu:
-        "Семён"
-        "Эпилог":
+        "Semyon"
+        "Epilogue":
             show cg epilogue_uv
             "cg epilogue_uv"
             show cg epilogue_un_bad
             "cg epilogue_un_bad"
             hide cg
             jump image_my_list_me_eng
-        "Семён в зеркале":
+        "Semyon in the mirror":
             show cg d2_mirror
             "cg d2_mirror"
             hide cg
             jump image_my_list_me_eng
-        "Катакомбы":
+        "Catacombs":
             show cg d4_catac
             "cg d4_catac"
             hide cg
             jump image_my_list_me_eng
-        "Клубничный кошмар":
+        "Strawberry race":
             show cg d5_strawberry_race
             "cg d5_strawberry_race"
             hide cg
             jump image_my_list_me_eng
-        "Пионер":
+        "Pioneer":
             show cg d6_pioneer
             "cg d6_pioneer"
             hide cg
             jump image_my_list_me_eng
-        ">>Назад<<":
+        ">>Back<<":
             jump image_my_list_eng
