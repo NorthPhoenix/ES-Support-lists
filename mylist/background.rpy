@@ -693,7 +693,7 @@ label background_my_list_eng:
             jump background_my_list_houses_eng
         "Island":
             jump background_my_list_island_eng
-        "Semen's room":
+        "Semyon's room":
             jump background_my_list_semen_eng
         "Stage":
             jump background_my_list_stage_eng
