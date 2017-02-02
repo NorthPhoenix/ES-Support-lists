@@ -257,6 +257,8 @@ label animation_my_list_together:
         ">>Назад<<":
             jump animation_my_list
 
+#Start of English translation
+
 label animation_my_list_eng:
     menu:
         "Animations"
