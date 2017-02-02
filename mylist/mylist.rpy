@@ -22,7 +22,7 @@ label meetss_eng:
 label my_list_language:
     if _preferences.language == None:
         jump meetss
-    elif _preferences.language == english:
+    elif _preferences.language == "english":
         jump meetss_eng
 
 label my_listst:
