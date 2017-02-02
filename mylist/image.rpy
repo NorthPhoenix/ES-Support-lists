@@ -1471,7 +1471,7 @@ label image_my_list_us_eng:
             "cg d4_us_cancer"
             hide cg
             jump image_my_list_us_eng
-        "Ulyana с проволокой":
+        "Ulyana with wire":
             show cg d5_sh_us
             "cg d5_sh_us"
             hide cg
