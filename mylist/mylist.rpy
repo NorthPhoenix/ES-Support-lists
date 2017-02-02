@@ -6,10 +6,10 @@ init:
 label meetss:
     $ persistent.sprite_time = 'day'
     $ sunset_time()
-    if not persistent.meetss:
-        jump my_listst
-    elif persistent.meetss:
+    if persistent.meetss:
         jump my_listnd
+    else:
+        jump my_listst
 
 label meetss_eng:
     $ persistent.sprite_time = 'day'
