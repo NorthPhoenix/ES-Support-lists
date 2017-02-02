@@ -700,6 +700,7 @@ label sound_my_list_rest:
             jump sound_my_list
 
 #Start of English translation
+
 label sound_my_list_eng:
     menu:
         "Break":
