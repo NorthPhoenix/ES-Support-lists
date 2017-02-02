@@ -1,12 +1,16 @@
-label music_my_list:
+label music_my_list_warn:
     show ss serious casual with dissolve
     ss "Я должна тебя предупредить!"
     show ss nosmile casual with dspr
-    ss "В разделе \"Музыка\" вместо квадратных скобок написаны, круглые скобки."
+    ss "В разделе \"Музыка\" вместо квадратных скобок написаны, {b}круглые скобки.{/b}"
     ss "Так сделано потому, что в RenPy я не могу писать квадратные скобки."
     show ss smile2 casual with dspr
-    ss "Так что, если ты видишь \"(\" или \")\"{w}, помни, это - квадратные скобки. "
+    ss "Так что, если ты видишь \"(\" или \")\"{w}, помни, это - {b}квадратные скобки{/b}. "
     hide ss
+    $ persistent.music_warn = True
+    jump music_my_list
+
+label music_my_list:
     menu:
         "Музыка"
         "ES: Dark Side":
@@ -411,6 +415,19 @@ label music_my_list_bright_side3:
                 jump music_my_list
 
 #Start of English version
+
+label music_my_list_warn_eng:
+    show ss serious casual with dissolve
+    ss "I must to warn you!"
+    show ss nosmile casual with dspr
+    ss "In section \"Music\" instead of square brackets {b}parentheses{/b} are written."
+    ss "That's because I can't write square brackets in Ren'Py."
+    show ss smile2 casual with dspr
+    ss "So, if you see \"(\" or \")\"{w}, remember, it's a {b}square brackets.{/b}"
+    hide ss
+    $ persistent.music_warn = True
+    jump music_my_list_eng
+
 label music_my_list_eng:
     menu:
         "Music"
@@ -767,6 +784,16 @@ label music_my_list_bright_side3_eng:
             "music_list(\"just_think\")"
             stop music fadeout 1
             jump music_my_list_bright_side3_eng
+        "Feeling Good":
+            play music music_list["everyday_theme"] fadein 1
+            "music_list(\"everyday_theme\")"
+            stop music fadeout 1
+            jump music_my_list_bright_side3_eng
+        "Confession":
+            play music music_list["confession_oboe"] fadein 1
+            "music_list(\"confession_oboe\")"
+            stop music fadeout 1
+            jump music_my_list_bright_side3_eng
         "ES: Bright Side (1)":
             jump music_my_list_bright_side_eng
         "ES: Bright Side (2)":
@@ -777,11 +804,6 @@ label music_my_list_bright_side3_eng:
     label music_my_list_extra_eng:
         menu:
             "Extra"
-            "Confession":
-                play music music_list["confession_oboe"] fadein 1
-                "music_list(\"confession_oboe\")"
-                stop music fadeout 1
-                jump music_my_list_extra
             "Kostry":
                 play music music_list["kostry"] fadein 1
                 "music_list(\"kostry\")"
@@ -800,11 +822,6 @@ label music_my_list_bright_side3_eng:
             "Sparkles":
                 play music music_list["sparkles"] fadein 1
                 "music_list(\"sparkles\")"
-                stop music fadeout 1
-                jump music_my_list_extra_eng
-            "Feeling Good":
-                play music music_list["everyday_theme"] fadein 1
-                "music_list(\"everyday_theme\")"
                 stop music fadeout 1
                 jump music_my_list_extra_eng
             "Dinner Horn Processed":
