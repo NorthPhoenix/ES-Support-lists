@@ -266,11 +266,11 @@ label image_my_list3:
             jump image_my_list3
         "Текст":
             show backdrop_text (u"Любой текст"):
-                xpos 0.5
-                ypos 0.5
+                xcenter 0.5
+                ycenter 0.5
             pause
             $ set_mode_nvl()
-            "backdrop_text (u\"Любой текст\")\n....xpos 0.5\n....ypos 0.5\n\n(\"....\" - четыре пробела)"
+            "backdrop_text (u\"Любой текст\")\n....xcenter 0.5\n....ycenter 0.5\n\n(\"....\" - четыре пробела)"
             $ set_mode_adv()
             hide backdrop_text
             jump image_my_list3
@@ -301,7 +301,7 @@ label image_my_list3_splashscreen:
                 linear 4.0pos (0,-1080)
             pause
             $ set_mode_nvl()
-            "scene splashscreen_day:\n....pos (0,0)\n....linear 4.0pos (0,-1080)\n$ renpy.pause(4)\n\n(\"....\" - четыре пробела)"
+            "scene splashscreen_day:\n....pos (0,0)\n....linear 4.0pos (0,-1080)\n\n(\"....\" - четыре пробела)"
             $ set_mode_adv()
             scene black
             jump image_my_list3_splashscreen
@@ -954,16 +954,7 @@ label image_my_list3_eng:
             hide soviet_games
             jump image_my_list3_eng
         "Splashscreen":
-            show splashscreen_day
-            "splashscreen_day"
-            hide splashscreen_day
-            show splashscreen_sunset
-            "splashscreen_sunset"
-            hide splashscreen_sunset
-            show splashscreen_night
-            "splashscreen_night"
-            hide splashscreen_night
-            jump image_my_list3_eng
+            jump image_my_list3_splashscreen_eng
         "Logo":
             show logo_day
             "logo_day"
@@ -975,6 +966,17 @@ label image_my_list3_eng:
             "logo_night"
             hide logo_night
             jump image_my_list3_eng
+        "Icon":
+            show icon_large
+            "icon_large"
+            hide icon_large
+            show icon
+            "icon"
+            hide icon
+            show icon16
+            "icon16"
+            hide icon16
+            jump image_my_list3_eng
         "Achievement":
             show achievement
             "achievement"
@@ -982,6 +984,9 @@ label image_my_list3_eng:
             show achievement3
             "achievement3"
             hide achievement3
+            show collector
+            "collector"
+            hide collector
             show dv_bad
             "dv_bad"
             hide dv_bad
@@ -1018,6 +1023,12 @@ label image_my_list3_eng:
             show uv_city
             "uv_city"
             hide uv_city
+            show uv_good
+            "uv_good"
+            hide uv_good
+            show void
+            "void"
+            hide void
             jump image_my_list3_eng
         "Bus":
             show op_back
@@ -1049,8 +1060,13 @@ label image_my_list3_eng:
             hide op_uv3
             jump image_my_list3_eng
         "Text":
-            show backdrop_text (u"Любой текст")
-            "backdrop_text (u\"Любой текст\",параметры...)"
+            show backdrop_text (u"Any text"):
+                xcenter 0.5
+                ycenter 0.5
+            pause
+            $ set_mode_nvl()
+            "show backdrop_text (u\"Any text\")\n....xcenter 0.5\n....ycenter 0.5\n\n(\"....\" - four spaces)"
+            $ set_mode_adv()
             hide backdrop_text
             jump image_my_list3_eng
         "Cards tournament":
@@ -1070,6 +1086,42 @@ label image_my_list3_eng:
             jump image_my_list2_eng
         ">>Back<<":
             jump start_my_list_eng
+
+label image_my_list3_splashscreen_eng:
+    menu:
+        "Splashscreen"
+        "Day":
+            scene splashscreen_day:
+                pos (0,0)
+                linear 4.0pos (0,-1080)
+            pause
+            $ set_mode_nvl()
+            "scene splashscreen_day:\n....pos (0,0)\n....linear 4.0pos (0,-1080)\n\n(\"....\" - four spaces)"
+            $ set_mode_adv()
+            scene black
+            jump image_my_list3_splashscreen_eng
+        "Sunset":
+            scene splashscreen_sunset:
+                pos (0,0)
+                linear 4.0pos (0,-1080)
+            pause
+            $ set_mode_nvl()
+            "scene splashscreen_sunset:\n....pos (0,0)\n....linear 4.0pos (0,-1080)\n\n(\"....\" - four spaces)"
+            $ set_mode_adv()
+            scene black
+            jump image_my_list3_splashscreen_eng
+        "Night":
+            scene splashscreen_night:
+                pos (0,0)
+                linear 4.0pos (0,-1080)
+            pause
+            $ set_mode_nvl()
+            "scene splashscreen_night:\n....pos (0,0)\n....linear 4.0pos (0,-1080)\n\n(\"....\" - four spaces)"
+            $ set_mode_adv()
+            scene black
+            jump image_my_list3_splashscreen_eng
+        ">>Back<<":
+            jump image_my_list3_eng
 
 label image_my_list_sl_eng:
     menu:
@@ -1200,8 +1252,13 @@ label image_my_list_un_eng:
             hide cg
             jump image_my_list_un_eng
         "Suicide":
-            show cg d7_un_suicide
-            "cg d7_un_suicide"
+            show cg d7_un_suicide :
+                pos (0,-360)
+                linear 10.0pos (0,0)
+            pause
+            $ set_mode_nvl()
+            "show cg d7_un_suicide:\n....pos (0,-360)\n....linear 10.0pos (0,0)\n\n(\"....\" - four spaces)"
+            $ set_mode_adv()
             hide cg
             jump image_my_list_un_eng
         "Lena's epilogue":
@@ -1220,9 +1277,15 @@ label image_my_list_dv_eng:
     menu:
         "Alisa"
         "Beach":
-            show cg d2_2ch_beach
-            "cg d2_2ch_beach"
+            show cg d2_2ch_beach  with dissolve:
+                pos (0,-1920)
+                linear 10.0pos (0,0)
+                linear 2.0pos (0, -250)
+            pause
+            $ set_mode_nvl()
+            "show cg d2_2ch_beach:\n....pos (0,-1920)\n....linear 10.0pos (0,0)\n....linear 2.0pos (0, -250)\n\n(\"....\" - four spaces)"
             hide cg
+            $ set_mode_adv()
             jump image_my_list_dv_eng
         "In the water":
             show cg d2_water_dan
