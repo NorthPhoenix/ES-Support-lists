@@ -22,6 +22,11 @@ label background_my_list_town:
             jump background_my_list_town
         "Комната Семёна":
             jump background_my_list_semen
+        "Автобусная остановка":
+            scene bg bus_stop
+            "bg bus_stop"
+            scene black
+            jump background_my_list_town
         ">>Назад<<":
             jump background_my_list
 
@@ -59,7 +64,14 @@ label background_my_list_lz:
         menu:
             "Лагерные окрестности"
             "Автобусная остановка":
-                jump background_my_list_bus_stop
+                scene bg ext_no_bus
+                "bg ext_no_bus"
+                scene bg ext_no_bus_sunset
+                "bg ext_no_bus_sunset"
+                scene bg ext_no_bus_night
+                "bg ext_no_bus_night"
+                scene black
+                jump background_my_list_lo
             "Пляж":
                 scene bg ext_beach_day
                 "bg ext_beach_day"
@@ -111,27 +123,7 @@ label background_my_list_bus_start:
             jump background_my_list_bus_start
         ">>Назад<<":
             jump background_my_list
-
-label background_my_list_bus_stop:
-    menu:
-        "Автобусная остановка"
-        "Совёнок":
-            scene bg ext_no_bus
-            "bg ext_no_bus"
-            scene bg ext_no_bus_sunset
-            "bg ext_no_bus_sunset"
-            scene bg ext_no_bus_night
-            "bg ext_no_bus_night"
-            scene black
-            jump background_my_list_bus_stop
-        "Город":
-            scene bg bus_stop
-            "bg bus_stop"
-            scene black
-            jump background_my_list_bus_stop
-        ">>Назад<<":
-            jump background_my_list_lo
-
+        
 label background_my_list_aidpost:
     menu:
         "Медпункт"
@@ -647,103 +639,130 @@ label background_my_list_catacombs:
             jump background_my_list_old_building_main
 
 #Start og English version
+
 label background_my_list_eng:
     menu:
+        "Backgraunds"
+        "Camp buildings":
+            jump background_my_list_lz_eng
+        "Camp surroundings":
+            jump background_my_list_lo_eng
+        "Bus":
+            jump background_my_list_bus_start_eng
+        "Town":
+            jump background_my_list_town_eng
+        ">>Назад<<":
+            jump start_my_list_eng
+
+label background_my_list_town_eng:
+    menu:
+        "Town"
+        "View from the bus window":
+            scene bg intro_xx
+            "bg intro_xx"
+            scene black
+            jump background_my_list_town_eng
+        "Semyon's room":
+            jump background_my_list_semen_eng
         "Bus stop":
-            jump background_my_list_bus_stop_eng
+            scene bg bus_stop
+            "bg bus_stop"
+            scene black
+            jump background_my_list_town_eng
+        ">>Back<<":
+            jump background_my_list_eng
+
+label background_my_list_lz_eng:
+    menu:
+        "Camp buildings"
         "Aid post":
             jump background_my_list_aidpost_eng
         "Bathhouse":
             scene bg ext_bathhouse_night
             "bg ext_bathhouse_night"
             scene black
-            jump background_my_list_eng
-        "Beach":
-            scene bg ext_beach_day
-            "bg ext_beach_day"
-            scene bg ext_beach_sunset
-            "bg ext_beach_sunset"
-            scene bg ext_beach_night
-            "bg ext_beach_night"
-            scene black
-            jump background_my_list_eng
-        "Bus":
-            jump background_my_list_bus_eng
+            jump background_my_list_lz_eng
         "Boathouse":
             scene bg ext_boathouse_day
             "bg ext_boathouse_day"
             scene bg ext_boathouse_night
             "bg ext_boathouse_night"
             scene black
-            jump background_my_list_eng
-        "Camp entrance":
-            scene bg ext_camp_entrance_day
-            "bg ext_camp_entrance_day"
-            scene bg ext_camp_entrance_night
-            "bg ext_camp_entrance_night"
-            scene black
-            jump background_my_list_eng
+            jump background_my_list_lz_eng
         "Clubs":
             jump background_my_list_clubs_eng
         "Dining hall":
             jump background_my_list_dining_hall_eng
-        "Pioneers cabins":
+        "Pioneer cabins":
             jump background_my_list_pioneers_eng
-        "Houses":
-            jump background_my_list_houses_eng
-        "Island":
-            jump background_my_list_island_eng
-        "Semyon's room":
-            jump background_my_list_semen_eng
-        "Stage":
-            jump background_my_list_stage_eng
         "Library":
             jump background_my_list_library_eng
-        "Square":
-            jump background_my_list_square_eng
         "Music club":
             jump background_my_list_musclub_eng
+        ">>Back<<":
+            jump background_my_list_eng
+
+    label background_my_list_lo_eng:
+        menu:
+            "Camp surroundings"
+            "Bus stop":
+                scene bg ext_no_bus
+                "bg ext_no_bus"
+                scene bg ext_no_bus_sunset
+                "bg ext_no_bus_sunset"
+                scene bg ext_no_bus_night
+                "bg ext_no_bus_night"
+                scene black
+                jump background_my_list_lo_eng
+            "Beach":
+                scene bg ext_beach_day
+                "bg ext_beach_day"
+                scene bg ext_beach_sunset
+                "bg ext_beach_sunset"
+                scene bg ext_beach_night
+                "bg ext_beach_night"
+                scene black
+                jump background_my_list_lo_eng
+            "Camp entrance":
+                scene bg ext_camp_entrance_day
+                "bg ext_camp_entrance_day"
+                scene bg ext_camp_entrance_night
+                "bg ext_camp_entrance_night"
+                scene black
+                jump background_my_list_lo_eng
+            "Houses":
+                jump background_my_list_houses_eng
+            "Island":
+                jump background_my_list_island_eng
+            "Stage":
+                jump background_my_list_stage_eng
+            "Square":
+                jump background_my_list_square_eng
+            "Old building":
+                jump background_my_list_old_building_main_eng
+            "Paths":
+                jump background_my_list_path_eng
+            "Playground":
+                jump background_my_list_playground_eng
+            "Meadow":
+                jump background_my_list_polyana_eng
+            "Road":
+                jump background_my_list_road_eng
+            "Wash stand":
+                jump background_my_list_washstand_eng
+            ">>Back<<":
+                jump background_my_list_eng
+
+label background_my_list_bus_start_eng:
+    menu:
+        "Bus"
+        "Camp bus":
+            jump background_my_list_bus_eng
         "Liaz":
             scene bg int_liaz
             "bg int_liaz"
             scene black
-            jump background_my_list_eng
-        "Old building":
-            jump background_my_list_old_building_main_eng
-        "Paths":
-            jump background_my_list_path_eng
-        "Playground":
-            jump background_my_list_playground_eng
-        "Meadow":
-            jump background_my_list_polyana_eng
-        "Road":
-            jump background_my_list_road_eng
-        "Wash stand":
-            jump background_my_list_washstand_eng
-        "City":
-            scene bg intro_xx
-            "bg intro_xx"
-            scene black
-            jump background_my_list_eng
-        ">>Back<<":
-            jump start_my_list_eng
-
-label background_my_list_bus_stop_eng:
-    menu:
-        "No bus":
-            scene bg ext_no_bus
-            "bg ext_no_bus"
-            scene bg ext_no_bus_sunset
-            "bg ext_no_bus_sunset"
-            scene bg ext_no_bus_night
-            "bg ext_no_bus_night"
-            scene black
-            jump background_my_list_bus_stop_eng
-        "City":
-            scene bg bus_stop
-            "bg bus_stop"
-            scene black
-            jump background_my_list_bus_stop_eng
+            jump background_my_list_bus_start_eng
         ">>Back<<":
             jump background_my_list_eng
 
@@ -754,7 +773,7 @@ label background_my_list_aidpost_eng:
         "Inside":
             jump background_my_list_aidpost_int_eng
         ">>Back<<":
-            jump background_my_list_eng
+            jump background_my_list_lz_eng
 
 label background_my_list_aidpost_int_eng:
     scene bg int_aidpost_day
@@ -800,7 +819,7 @@ label background_my_list_bus_eng:
             scene black
             jump background_my_list_bus_eng
         ">>Back<<":
-            jump background_my_list_eng
+            jump background_my_list_bus_start_eng
 
 label background_my_list_clubs_eng:
     menu:
@@ -823,7 +842,7 @@ label background_my_list_clubs_eng:
             scene black
             jump background_my_list_clubs_eng
         ">>Back<<":
-            jump background_my_list_eng
+            jump background_my_list_lz_eng
 
 label background_my_list_dining_hall_eng:
     menu:
@@ -832,7 +851,7 @@ label background_my_list_dining_hall_eng:
         "Inside":
             jump background_my_list_dining_hall_int_eng
         ">>Back<<":
-            jump background_my_list_eng
+            jump background_my_list_lz_eng
 
 label background_my_list_dining_hall_ext_eng:
     menu:
@@ -887,7 +906,7 @@ label background_my_list_pioneers_eng:
         "Lena and Miku's cabin":
             jump background_my_list_pioneers_un_eng
         ">>Back<<":
-            jump background_my_list_eng
+            jump background_my_list_lz_eng
 
 label background_my_list_pioneers_sl_eng:
     menu:
@@ -975,7 +994,7 @@ label background_my_list_houses_eng:
     scene bg ext_houses_sunset
     "bg ext_houses_sunset"
     scene black
-    jump background_my_list_eng
+    jump background_my_list_lo_eng
 
 label background_my_list_island_eng:
     scene bg ext_island_day
@@ -983,7 +1002,7 @@ label background_my_list_island_eng:
     scene bg ext_island_night
     "bg ext_island_night"
     scene black
-    jump background_my_list_eng
+    jump background_my_list_lo_eng
 
 label background_my_list_semen_eng:
     scene bg semen_room
@@ -991,7 +1010,7 @@ label background_my_list_semen_eng:
     scene bg semen_room_window
     "bg semen_room_window"
     scene black
-    jump background_my_list_eng
+    jump background_my_list_town_eng
 
 label background_my_list_stage_eng:
     menu:
@@ -1008,7 +1027,7 @@ label background_my_list_stage_eng:
             scene black
             jump background_my_list_stage_eng
         ">>Back<<":
-            jump background_my_list_eng
+            jump background_my_list_lo_eng
 
 label background_my_list_library_eng:
     menu:
@@ -1029,7 +1048,7 @@ label background_my_list_library_eng:
             scene black
             jump background_my_list_library_eng
         ">>Back<<":
-            jump background_my_list_eng
+            jump background_my_list_lz_eng
 
 label background_my_list_square_eng:
     menu:
@@ -1055,7 +1074,7 @@ label background_my_list_square_eng:
             scene black
             jump background_my_list_square_eng
         ">>Back<<":
-            jump background_my_list_eng
+            jump background_my_list_lo_eng
 
 label background_my_list_musclub_eng:
     menu:
@@ -1070,7 +1089,7 @@ label background_my_list_musclub_eng:
             scene black
             jump background_my_list_musclub_eng
         ">>Back<<":
-            jump background_my_list_eng
+            jump background_my_list_lz_eng
 
 label background_my_list_old_building_main_eng:
     menu:
@@ -1081,7 +1100,7 @@ label background_my_list_old_building_main_eng:
         "Catacombs":
             jump background_my_list_catacombs_eng
         ">>Back<<":
-            jump background_my_list_eng
+            jump background_my_list_lo_eng
 
 label background_my_list_old_building_eng:
     menu:
@@ -1119,7 +1138,7 @@ label background_my_list_path_eng:
             scene black
             jump background_my_list_path_eng
         ">>Back<<":
-            jump background_my_list_eng
+            jump background_my_list_lo_eng
 
 label background_my_list_playground_eng:
     scene bg ext_playground_day
@@ -1127,7 +1146,7 @@ label background_my_list_playground_eng:
     scene bg ext_playground_night
     "bg ext_playground_night"
     scene black
-    jump background_my_list_eng
+    jump background_my_list_lo_eng
 
 label background_my_list_polyana_eng:
     scene bg ext_polyana_day
@@ -1137,7 +1156,7 @@ label background_my_list_polyana_eng:
     scene bg ext_polyana_night
     "bg ext_polyana_night"
     scene black
-    jump background_my_list_eng
+    jump background_my_list_lo_eng
 
 label background_my_list_road_eng:
     scene bg ext_road_day
@@ -1149,7 +1168,7 @@ label background_my_list_road_eng:
     scene bg ext_road_night
     "bg ext_road_night"
     scene black
-    jump background_my_list_eng
+    jump background_my_list_lo_eng
 
 label background_my_list_washstand_eng:
     scene bg ext_washstand_day
@@ -1157,7 +1176,7 @@ label background_my_list_washstand_eng:
     scene bg ext_washstand2_day
     "bg ext_washstand2_day"
     scene black
-    jump background_my_list_eng
+    jump background_my_list_lo_eng
 
 label background_my_list_mine_eng:
     menu:
