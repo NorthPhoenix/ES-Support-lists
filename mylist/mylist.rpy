@@ -80,6 +80,20 @@ label start_my_list:
             jump sound_my_list
         "Звуки окружающей среды":
             jump ambience_my_list
+        "\n\nМини-уроки\n":
+            if persistent.lessons:
+                jump qweasdzxc
+            else:
+                show ss normal casual with dissolve
+                ss "В этом разделе не будут представлены основы ES модинга."
+                show ss smile2 casual with dspr
+                ss "Но тут вы найдёте другие интересные особенности и \"фишки,\" про которые мало где говорится{w}, такие как редкоиспользуемые переходы, карточная мини-игра или ввод собственного имени."
+                ss "А также я попытаюсь более доступно объяснить некоторые сложные моменты, с которыми возьникают проблемы у многих мододелов."
+                show ss grin_smile casual with dspr
+                ss "Преступим!"
+                $ persistent.lessons = True
+                hide ss
+                jump qweasdzxc
         ">>Выход<<":
             jump exit
 
@@ -3964,6 +3978,20 @@ label start_my_list_eng:
             jump sound_my_list_eng
         "Ambient sound":
             jump ambience_my_list_eng
+        "\n\nМини-уроки\n":
+            if persistent.lessons:
+                jump qweasdzxc
+            else:
+                show ss normal casual with dissolve
+                ss "В этом разделе не будут представлены основы ES модинга."
+                show ss smile2 casual with dspr
+                ss "Но тут вы найдёте другие интересные особенности и \"фишки,\" про которые мало где говорится{w}, такие как редкоиспользуемые переходы, карточная мини-игра или ввод собственного имени."
+                ss "А также я попытаюсь более доступно объяснить некоторые сложные моменты, с которыми возьникают проблемы у многих мододелов."
+                show ss grin_smile casual with dspr
+                ss "Преступим!"
+                $ persistent.lessons = True
+                hide ss
+                jump qweasdzxc
         ">>Quit<<":
             jump exit_eng
 
