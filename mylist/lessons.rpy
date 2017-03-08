@@ -1,4 +1,5 @@
 init:
+    image zoominout_code = "mods/mylist/image/zoominout.png"
     image qwe = ParameterizedText(style = "qwe_text")
     $ style.qwe_text = Style(style.default)
     $ style.qwe_text.color = "#FF4500"
@@ -25,6 +26,10 @@ init python:
 
         def pick_my_card_last(self):
             return self.pick_my_card()
+
+#=========================================================================================================================================================================================================================================
+#==========================================================================================================================================================================================================================================
+
 label qweasdzxc:
     menu:
         "{i}Мини-Уроки{/i}"
@@ -68,7 +73,6 @@ label lesson_transition:
     hide sl
     hide ss
     scene bg black
-    with blinds
     scene bg int_dining_hall_sunset
     show ss smile2 casual at fright
     with blinds
@@ -77,24 +81,57 @@ label lesson_transition:
     show dv normal pioneer2 at cleft with squares
     extend "{i}with squares!{/i}"
     ss "Алиса поможет нам с новыми переходами."
-    ss "Существует много трансформаций вида {i}move.{/i}"
+    ss "Существует много переходов вида {i}move.{/i}"
     ss "Группа {i}movein (moveinright, moveinleft, moveintop, moveinbottom){/i} - двигают изображение извне экрана внутрь и {i}moveout (moveoutright, moveoutleft, moveouttop, moveoutbottom){/i} - двигают изображение за пределы экрана."
     hide dv with moveoutbottom
-    show dv normal pioneer2 with moveinleft
+    show dv normal pioneer2 at cleft with moveinleft
     hide dv with moveoutleft
-    show dv normal pioneer2 with moveintop
+    show dv normal pioneer2 at cleft with moveintop
     hide dv with moveouttop
-    show dv normal pioneer2 behind ss with moveinright
+    show dv normal pioneer2 at cleft behind ss with moveinright
     hide dv with moveoutright
-    show dv normal pioneer2 with moveinbottom
-    ss "Есть также переходы {i}with zoomin{/i} и {i}with zoomout.{/i}"
-    hide dv with zoomout
-    show dv normal pioneer2 with zoomin
+    show dv normal pioneer2 at cleft with moveinbottom
+    ss "Есть также переходы вида {i}ease.{/i}{w} Они очень похожи на переходы вида {i}move,{/i} но протекают более плавно."
+    ss "Группа {i}easein (easeinright, easeinleft, easeintop, easeinbottom){/i} и {i}easeout (easeoutright, easeoutleft, easeouttop, easeoutbottom){/i}"
+    hide dv with easeoutbottom
+    show dv normal pioneer2 at cleft with easeinleft
+    hide dv with easeoutleft
+    show dv normal pioneer2 at cleft with easeintop
+    hide dv with easeouttop
+    show dv normal pioneer2 at cleft behind ss with easeinright
+    hide dv with easeoutright
+    show dv normal pioneer2 at left with easeinbottom
+    ss "Ну и просто {i}...with ease{/i}."
+    hide ss with dspr
+    show dv normal pioneer2 at fright with ease
+    show dv normal pioneer2 as dv1 at fright behind dv
+    ss "Здесь просто представленны {i}ease{/i} и {i}move{/i} для сравнения."
+    show dv normal pioneer2 at fleft with move
+    show dv normal pioneer2 as dv1 at fleft with ease
+    hide dv with dissolve
+    hide dv as dv1 with dissolve
+    show ss normal casual at center with dissolve
+    ss "Также существует группа переходов масштабирования изображения {i}zoomin, zoomout{/i} и {i}zoominout.{/i}"
+    hide ss with zoomout
+    show ss smile2 casual with zoomin
+    show zoominout_code:
+        anchor(0,0)
+        pos(20,20)
+    ss "{i}\"zoominout\"{/i} используется для удобства, когда вам нужно одновременно вывести и убрать с экрана некоторые изображения."
+
+##    show sl normal dress at left
+##    show dv surprised pioneer
+##    hide el
+##    with zoominout
+
+    hide zoominout_code
     show bg black
     hide ss
-    hide dv
     with dissolve
     jump qweasdzxc
+
+#==========================================================================================================================================================================================================================================
+#==========================================================================================================================================================================================================================================
 
 label mqweasdzxc:
     scene black
@@ -106,6 +143,8 @@ label mqweasdzxc:
             jump sl_play
         "Выбор имени":
             jump pick_name
+        "Спрайты":
+            jump sprite_test
         ">>Назад<<":
             jump qweasdzxc
 
@@ -159,4 +198,12 @@ label pick_name:
     show sl smile pioneer with dspr
     sl "Приятно познакомиться %(rc_name)s."
     rc "Взаимно."
+    jump mqweasdzxc
+
+label sprite_test:
+    window hide
+    show un night with dissolve
+    pause
+    hide un with dissolve
+    window show
     jump mqweasdzxc

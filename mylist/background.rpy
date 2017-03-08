@@ -123,7 +123,7 @@ label background_my_list_bus_start:
             jump background_my_list_bus_start
         ">>Назад<<":
             jump background_my_list
-        
+
 label background_my_list_aidpost:
     menu:
         "Медпункт"
