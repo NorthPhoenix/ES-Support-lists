@@ -60,11 +60,12 @@ label my_listnd_eng:
     jump start_my_list_eng
 
 label start_my_list:
+    $ persistent.sprite_time = 'day'
     scene black
     menu:
         "Выберите раздел"
         "Спрайты":
-            jump sprites_my_list
+            jump sprites_my_list_sprite_time
         "Фоны":
             jump background_my_list
         "Картинки":
@@ -114,6 +115,20 @@ label exit:
             $ renpy.pause (1)
             hide ss with dissolve
             jump start_my_list
+
+label sprites_my_list_sprite_time:
+    menu:
+        "Время спрайтов"
+        "День":
+            jump sprites_my_list
+        "Закат":
+            $ persistent.sprite_time = 'sunset'
+            jump sprites_my_list
+        "Ночь":
+            $ persistent.sprite_time = 'night'
+            jump sprites_my_list
+
+
 
 label sprites_my_list:
     menu:
@@ -1311,6 +1326,8 @@ label sprites_my_list_un_pioner:
             "un shy pioneer far"
             show un shy pioneer with dspr
             "un shy pioneer"
+            show un night with dspr
+            "un night"
             show un shy pioneer close with dspr
             "un shy pioneer close"
             hide un with dspr
@@ -3959,10 +3976,11 @@ label sprites_my_list_pi:
 #Start of English version
 
 label start_my_list_eng:
+    $ persistent.sprite_time = 'day'
     scene black
     menu:
         "Sprites":
-            jump sprites_my_list_eng
+            jump sprites_my_list_sprite_time_eng
         "Background":
             jump background_my_list_eng
         "Images":
@@ -4012,6 +4030,20 @@ label exit_eng:
             $ renpy.pause (1)
             hide ss with dissolve
             jump start_my_list_eng
+
+label sprites_my_list_sprite_time_eng:
+    menu:
+        "Sprite time"
+        "Day":
+            jump sprites_my_list_eng
+        "Sunset":
+            $ persistent.sprite_time = 'sunset'
+            jump sprites_my_list_eng
+        "Night":
+            $ persistent.sprite_time = 'night'
+            jump sprites_my_list_eng
+
+
 
 label sprites_my_list_eng:
     menu:
@@ -5210,6 +5242,8 @@ label sprites_my_list_un_pioner_eng:
             "un shy pioneer far"
             show un shy pioneer with dspr
             "un shy pioneer"
+            show un night with dspr
+            "un night"
             show un shy pioneer close with dspr
             "un shy pioneer close"
             hide un with dspr
