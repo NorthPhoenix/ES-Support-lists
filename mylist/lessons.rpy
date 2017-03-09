@@ -114,7 +114,7 @@ label lesson_transition:
     ss "Также существует группа переходов масштабирования изображения {i}zoomin, zoomout{/i} и {i}zoominout.{/i}"
     hide ss with zoomout
     show ss smile2 casual with zoomin
-    show zoominout_code:
+    show zoominout_code with dissolve:
         anchor(0,0)
         pos(20,20)
     ss "{i}\"zoominout\"{/i} используется для удобства, когда вам нужно одновременно вывести и убрать с экрана некоторые изображения."
@@ -123,6 +123,16 @@ label lesson_transition:
 ##    show dv surprised pioneer
 ##    hide el
 ##    with zoominout
+
+    hide zoominout_code
+    ss "Teper pogovorim o sleduushey gruppe perehodov {i}slide{/i}{w}, oni chashe vsego ispolzuyutsya dlya pokaza backgroundov ili cartinok."
+    ss "Sushestvuet obichniy {i}slide{/i} i {i}slideaway{/i}, seychas ya pokaju v chem raznica."
+    ss "Gruppa {i}slide (slideright, slideup, slideleft, slidedown){/i}"
+    show bg int_dining_hall_night with slideright
+    show bg int_dining_hall_sunset with slideup
+    show bg int_dining_hall_day with slideleft
+    show bg int_dining_hall_sunset with slidedown
+    ss "Teper gruppa {i}slideaway (slideawayright, slideawayup, slideawayleft, slideawaydown){/i}"
 
     hide zoominout_code
     show bg black
