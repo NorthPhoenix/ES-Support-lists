@@ -81,7 +81,7 @@ label start_my_list:
             jump sound_my_list
         "Звуки окружающей среды":
             jump ambience_my_list
-        "\n\nМини-уроки\n":
+        "\nМини-уроки\n":
             if persistent.lessons:
                 jump qweasdzxc
             else:
