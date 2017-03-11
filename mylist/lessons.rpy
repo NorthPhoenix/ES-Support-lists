@@ -1,5 +1,6 @@
 init:
     image zoominout_code = "mods/mylist/image/zoominout.png"
+    image transition_1 = "mods/mylist/image/transition_1.png"
     image qwe = ParameterizedText(style = "qwe_text")
     $ style.qwe_text = Style(style.default)
     $ style.qwe_text.color = "#FF4500"
@@ -41,6 +42,7 @@ label qweasdzxc:
             jump start_my_list
 
 label lesson_transition:
+    $ persistent.sprite_time = 'day'
     show ss grin_smile casual at right with pixellate
     ss "Знали, что я так умею?"
     show ss normal casual at center with blinds
@@ -124,20 +126,65 @@ label lesson_transition:
 ##    hide el
 ##    with zoominout
 
+    ss "Теперь поговорим о следующей группе переходов - {i}slide{/i}{w}, они чаще всего используются для показа фонов или картинок."
     hide zoominout_code
-    ss "Teper pogovorim o sleduushey gruppe perehodov {i}slide{/i}{w}, oni chashe vsego ispolzuyutsya dlya pokaza backgroundov ili cartinok."
-    ss "Sushestvuet obichniy {i}slide{/i} i {i}slideaway{/i}, seychas ya pokaju v chem raznica."
-    ss "Gruppa {i}slide (slideright, slideup, slideleft, slidedown){/i}"
+    ss "Существует обычный {i}slide{/i} и {i}slideaway{/i}, сейчас я покажу в чём разница."
+    ss "Группа slide {i}(slideright, slideup, slideleft, slidedown){/i}"
     show bg int_dining_hall_night with slideright
     show bg int_dining_hall_sunset with slideup
     show bg int_dining_hall_day with slideleft
     show bg int_dining_hall_sunset with slidedown
-    ss "Teper gruppa {i}slideaway (slideawayright, slideawayup, slideawayleft, slideawaydown){/i}"
+    ss "Группа slideaway{i} (slideawayright, slideawayup, slideawayleft, slideawaydown){/i}"
+    show bg int_dining_hall_night with slideawayright
+    show bg int_dining_hall_sunset with slideawayup
+    show bg int_dining_hall_day with slideawayleft
+    show bg int_dining_hall_sunset with slideawaydown
+    show ss serious casual with dspr
+    ss "Запомните! Нет перехода {i}slide, slideaway{/i} или {i}zoom!{/i}"
+    ss "К примеру вы {b}не можите{/b} написать{i}\"...with zoom\" {/i}или {i}\"...with slide\"{/i}."
+    show ss normal casual with dspr
+    ss "Поняли?{w} Значит поехали дальше!"
+    ss "Следующая у нас на очереди группа wipe {i}(wiperight, wipeup, wipeleft, wipedown){/i}"
+    show bg int_dining_hall_night with wiperight
+    show bg int_dining_hall_sunset with wipeup
+    show bg int_dining_hall_day with wipeleft
+    show bg int_dining_hall_sunset with wipedown
+    ss "Просто {i}wipe{/i} также не существует."
+    ss "Следующая группа - push{i}(pushright pushup, pushleft, pushdown).{/i}"
+    show bg int_dining_hall_night with pushright
+    show bg int_dining_hall_sunset with pushup
+    show bg int_dining_hall_day with pushleft
+    show bg int_dining_hall_sunset with pushdown
 
-    hide zoominout_code
+##    "                           move   ease   ~>   "top"   "bottom"          "
+##    "       wipe   slide   slideaway   push   ~>   "up"     "down"           "
+
+    show transition_1 with dissolve:
+        anchor(0,0)
+        pos(20,20)
+    ss "Также обратите внимание на то, что в группах \"move\"и \"ease\" используются суфиксы \"top\" и \"bottom\", когда в \"wipe\", \"slide\", \"slideaway\" и \"push\" используются \"up\" и \"down\".{w} Не путайте!"
+    hide transition_1
+    ss "И последнии на сегодня переходы!"
+    show ss at left with ease
+    show icon_large at truecenter with irisin
+    $ renpy.pause(1.0)
+    hide icon_large with irisout
+    extend " {i}irisin{/i} и {i}irisout.{/i}"
+    show ss smile2 casual at center with ease
+    ss "Ну вот, это вроде все переходы."
+    ss "Некоторые могут показаться вам бесполезными.{w} Но всё зависит от поставленной перед вами задачи."
+    ss "Также вы можете создавать свои переходы и соединения используя определённые команды. "
+    show ss smile casual
+    extend "Но это тема для следующего возможного урока."
+    ss "На сегодня всё!"
     show bg black
     hide ss
     with dissolve
+    $ renpy.pause(0.5)
+    $ persistent.sprite_time = 'day'
+    "Пишите в коментариях или в обсуждении к моду, уроки на какие темы вы хотите, чтобы я сделал.{w} Также пишите, если хотите, чтобы я продолжил уроки про переходы и рассказал как создавать свои."
+    "Услышемся в следующем уроке!"
+    $ renpy.pause(1.0)
     jump qweasdzxc
 
 #==========================================================================================================================================================================================================================================
@@ -212,8 +259,8 @@ label pick_name:
 
 label sprite_test:
     window hide
-    show un night with dissolve
+    show un night with dis
     pause
-    hide un with dissolve
+    hide un with dis
     window show
     jump mqweasdzxc
